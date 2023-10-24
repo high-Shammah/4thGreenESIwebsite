@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+  
+
+    .books-we-accept-section-2 {
+        display: flex;
+        width: 100%;
+
+     
+    }
+
+    .text-container-2 {
+    /* Set a width for the text container, adjust as needed */
+    float: left;
+  width: 30%;
+    padding: 20px; /* Optional padding for spacing */
+    bottom: 300px; 
+  }
+
+
+    .swiper-2 {
+        float: left;
+        margin-left: 500px;
+        margin-bottom: 200px;
+        margin-top: -300px;
+        width: 800px;
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        width: 10%;
+      height: 10%;
+    }
+
+
+
+    .swiper-slide {
+      height: 300px;
+      background: #882525;
+      line-height: 40px;
+      width: 50px;
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide h4{
+        font-size: 16px;
+        margin-top: -150px;
+    }
+
+    .swiper-slide:nth-child(2) {
+      background: #8acc7d;
+    }
+
+    .swiper-slide:nth-child(3) {
+      background: #b7cc7d;
+    }
+
+    .swiper-slide:nth-child(4) {
+      background: #9eb75c;
+    }
+
+    .swiper-slide:nth-child(5) {
+      background: #7da8cc;
+    }
+
+    .swiper-slide:nth-child(6) {
+      background: #96cc7d;
+    }
+
+    .swiper-slide:nth-child(7) {
+      background: #cc7dae;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+
+  <section class="books-we-accept-section-2">
+
+    <div class="text-container-2">
+            
+        <h2>Our Story</h2>
+    
+    <div class="body-text">
+        <p>Our transformation began with a deep passion for books and a desire to make a lasting impact on society. 
+          Over the years, <br> we witnessed the transformative power of literature and the incredible opportunities it offers 
+          for personal growth, education, and empowerment.</p>
+    </div>
+    <div class="icon-2">
+      <i class="fas fa-hands-helping"></i>
+      <i class="fas fa-binoculars"></i>
+    </div>
+        
+    <div class="additional-text">
+        <p>Additional text or information goes here.</p>
+    </div>
+
+  <h3>
+    Slider5 is visible when you slide to 2,3, or 4, and slider5 has
+    "swiper-slide-visible" className
+  </h3>
+  <br />
+  <div class="swiper-2 mySwiper-2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> 
+        <h4>Slide 1</h4>
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 2
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 3
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 4
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 5
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 6
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 7
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 8
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 9
+        <p>Additional text or information goes here.</p>
+        <div class="icon-2">
+            <i class="fas fa-hands-helping"></i>
+            <i class="fas fa-binoculars"></i>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+   
+    var swiper = new Swiper(".mySwiper-2", {
+      watchSlidesProgress: true,
+      slidesPerView: 3,
+      centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+      loop:true,
+    autoplay:{
+      delay:2000,
+      disabledOnInteraction: false,
+    }
+  
+    });
+
+
+  </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Base styles for the footer */
+        .site-footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* For the desktop version */
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-line {
+            background-color: #555;
+            height: 2px;
+            margin: 10px 0;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            .footer-column {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Your website content here -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- Desktop version -->
+        <div class="footer-content">
+            <div class="footer-column">
+                <img src="logo.png" alt="Logo" width="100">
+                <h3>Brand Name</h3>
+                <p>Contact Information:</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>WhatsApp: (987) 654-3210</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <!-- Add more links here -->
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>What We Do</h3>
+                <ul>
+                    <li><a href="#">Library Building Projects</a></li>
+                    <li><a href="#">Education Initiatives</a></li>
+                    <li><a href="#">Mobile Libraries</a></li>
+                    <li><a href="#">Book Recycling Programs</a></li>
+                    <!-- Add more links here -->
+                </ul>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop:true,
+    autoplay:{
+      delay:2000,
+      disabledOnInteraction: false,
+    },
+
+
+    background-image: url("https://www.jarriahscfoundation.org/wp-content/uploads/2022/04/bg-4.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    <div class="border-rectangle"></div>
+    <div class="light-background-rectangle"></div>
+    <div class="light-background-rectangle-2"></div>
+    <div class="light-background-rectangle-3"></div>
+</div>
+
+.rectangle-with-text {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    width: 170px;
+    height: 50px;
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .rectangle-with-text .text {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  
+  .border-rectangle {
+    position: absolute;
+    bottom: 10px;
+    left: 300px; /* Adjust as needed */
+    width: 200px;
+    height: 70px;
+    border: 4px solid #000;
+  }
+  
+  .light-background-rectangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #D8F0E3;
+  }
+  
+  .light-background-rectangle-2 {
+    position: absolute;
+    bottom: 88px;
+    left: 400px;
+    width: 70px;
+    height: 290px;
+    background-color: #D8F0E3;
+  }
+  
+  .light-background-rectangle-3 {
+    position: absolute;
+    bottom: 0;
+    top: 30px;
+    left: -10px;
+    width: 30px;
+    height: 90px;
+    background-color: #D8F0E3;
+  }

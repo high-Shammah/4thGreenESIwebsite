@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Website</title>
+    <link rel="stylesheet" href="donatebook.css">
+    <script src="https://kit.fontawesome.com/69f9015363.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/swiper.min.css">
+<script src="path/to/swiper.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+
+        <div class="logo">  
+          <img src="images/IMG_0605.PNG" alt="Logo">
+          <span class="logo-text">Greenesibooks</span>
+        </div>
+
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="indexlandingpage.html">Donate books</a></li>
+            <li><a href="book.html">Receive books</a></li>
+        </ul>
+        <a href="book.html" onclick="redirectToForm()" class="button10">Receive a Book</a>
+        <div class="burger">&#9776;</div>
+    </nav>
+    
+</header>
+
+
+    <section class="black-section">
+        <h2 class="section-header-2">Donate Books: How we work</h2>
+    </section>
+
+
+    <section class="numbered-divs-section">   
+        <div class="numbered-div div1" data-aos="fade-up" data-aos-duration="1000">
+            <div class="number-circle">2</div>
+            <div>
+            <img src="images/istockphoto-1460017019-612x612.jpg" alt="Image 2">
+            <p class="bold-text">A Peak Into Our Mind</p>
+            <p>At Green ESI, we work passionately to promote literacy and empower those in need through the gift of books. Donating is easy - gather gently used books, drop them off at designated centers, or schedule pickups for larger contributions. 
+             </p>
+             <p>
+                Our dedicated team evaluates each book's quality and relevance before distributing them equitably to recipients in schools, libraries, and communities. Join our movement, and together, let's create a brighter future by spreading the joy of reading and knowledge. Your contribution makes a meaningful impact - thank you!
+            </p>
+            </div>
+        </div>
+
+        <div class="numbered-div div2" data-aos="fade-up" data-aos-duration="1000">
+            <div class="number-circle">2</div>
+            <div>
+            <img src="images/istockphoto-1400800786-612x612.jpg" alt="Image 2">
+            <p class="bold-text">Book Donation Process</p>
+            <p>Follow these simple steps to contribute to our book 
+                donation program: </p>
+                <p>
+                Step 1: Gather Your Books
+                </p>
+                <p>
+                Step 2: Specify the Number of Copies
+                </p>
+                <p>
+                Step 3: Complete the Donation Form</p>
+            </div>
+        </div>
+        <div class="numbered-div div3" data-aos="fade-up" data-aos-duration="1000">
+            <div class="number-circle">2</div>
+            <div>
+            <img src="images/istockphoto-1487776839-612x612.jpg" alt="Image 2">
+            <p class="bold-text">Book Sorting and Evaluation:</p>
+            <p>Upon receiving the donated books, our team of dedicated 
+                volunteers will carefully evaluate each book's condition. 
+                We'll ensure that the books are suitable for distribution and 
+                organize them based on genre and age-appropriateness.</p>
+                <p> After evaluation, the donated books will be added to our 
+                    inventory system, with details of the book titles, authors, 
+                    genres, and the number of copies available. This efficient 
+                    inventory management helps us keep track of available 
+                    books and match them to the recipients' needs.</p>
+            </div>
+        </div>
+        <div class="numbered-div div4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="number-circle">2</div>
+            <div>
+            <img src="images/istockphoto-1182951595-612x612.jpg" alt="Image 2">
+            <p class="bold-text">Recipient Identification</p>
+            <p>When identifying recipients for book donations, you will 
+                consider factors such as the number of copies available, 
+                the demand for specific titles, and the needs of different 
+                communities. This will help ensure that the right number 
+                of copies reaches each recipient group.</p>
+                <p>
+                    We work closely with schools, libraries, community centers, 
+                    and other organizations to identify individuals and 
+                    communities in need of books. By understanding the 
+                    specific requirements of each group, we can ensure that the 
+                    right books reach the right people.
+                </p>
+            </div>
+        </div>
+        <div class="numbered-div div5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="number-circle">2</div>
+            <div>
+            <img src="images/istockphoto-1485227968-612x612.jpg" alt="Image 2">
+            <p class="bold-text">Book Delivery and Impact</p>
+            <p>During book delivery, the number of copies provided to 
+                each recipient will be documented. This tracking allows 
+                you to measure the impact of your donations and gather 
+                feedback from recipients about the effectiveness of the 
+                materials provided.</p>
+            <p>
+                Based on our recipient identification process and the 
+                available inventory, we allocate the appropriate number 
+                of books to each recipient. We strive to distribute books 
+                equitably and prioritize areas with the greatest need.
+            </p>
+            </div>
+        </div>
+       
+    </section>
+
+ 
+
+
+      
+      <section class="donation-form">
+        <h2>Donation Form</h2>
+        <form id="donationForm">
+          <!-- Common form fields for both donation types -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="donationType">Choose donation type:</label>
+          <select id="donationType" name="donationType" required>
+            <option value="" disabled selected>Select donation type</option>
+            <option value="money">Donate Money</option>
+            <option value="books">Donate Books</option>
+          </select>
+      
+          <!-- Additional fields for donating money -->
+    <div id="moneyFields" style="display: none;">
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber" name="accountNumber" placeholder="Enter your account number">
+  
+        <label for="contactNumberMoney">Contact Number:</label>
+        <input type="tel" id="contactNumberMoney" name="contactNumberMoney" placeholder="Enter your contact number">
+  
+        <label for="donationAmount">Donation Amount:</label>
+        <input type="number" id="donationAmount" name="donationAmount" placeholder="Enter donation amount">
+  
+        <label for="currency">Currency Selection:</label>
+        <select id="currency" name="currency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <!-- Add more currency options here -->
+        </select>
+
+        <label for="donationFrequency">Donation Frequency:</label>
+        <select id="donationFrequency" name="donationFrequency">
+          <option value="onetime">One-time Donation</option>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <!-- Add more frequency options here -->
+        </select>
+  
+        <!-- Payment information fields (add appropriate fields for payment details) -->
+        <!-- Billing address field (add appropriate fields for billing address) -->
+  
+        <label for="comments">Comments/Message:</label>
+        <textarea id="comments" name="comments" placeholder="Enter any specific comments or messages"></textarea>
+      </div>
+
+      <button type="submit">Submit Donation</button>
+
+      
+          <!-- Additional fields for donating books -->
+          <div id="booksFields" style="display: none;">
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your contact number">
+      
+            <label for="bookTitles">Book Title(s):</label>
+            <input type="text" id="bookTitles" name="bookTitles" placeholder="Enter book title(s)">
+      
+            <label for="numberOfCopies">Number of Copies:</label>
+            <input type="number" id="numberOfCopies" name="numberOfCopies" placeholder="Enter number of copies">
+      
+            <label for="bookCondition">Book Condition:</label>
+            <input type="text" id="bookCondition" name="bookCondition" placeholder="Enter book condition">
+      
+           
+          <div id="booksFields" style="display: none;">
+            <label for="numberOfBooks">Number of Books:</label>
+            <input type="number" id="numberOfBooks" name="numberOfBooks" placeholder="Enter the number of books">
+            
+            <label for="genre">Genre/Category:</label>
+      <input type="text" id="genre" name="genre" placeholder="Enter book genre/category">
+
+      <label for="pickupPreference">Drop-off/Pickup Preference:</label>
+      <select id="pickupPreference" name="pickupPreference">
+        <option value="dropoff">Drop off</option>
+        <option value="pickup">Scheduled Pickup</option>
+      </select>
+            <!-- Other fields specific to donating books -->
+            <!-- Add more fields here as needed -->
+          </div>
+      
+          <button type="submit">Submit Donation</button>
+        </form>
+      </section>
+
+
+      <!-- Popup container -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" id="closePopup">&times;</span>
+      <h3>Thank You!</h3>
+      <p>Your donation has been submitted successfully.</p>
+    </div>
+  </div>
+
+
+      <footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="images/IMG_0605.PNG" alt="Your Book Website Logo">
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Your Book Website. All rights reserved.</p>
+    <p>Contact: contact@bookwebsite.com</p>
+  </div>
+</footer>
+
+      
+      
+      
+      
+
+    <!-- Your page content goes here -->
+
+    <script src="donatebooks.js"></script>
+</body>
+</html>
