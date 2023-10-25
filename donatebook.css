@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    margin-left: 0;
+    overflow-x: hidden;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
    
@@ -28,7 +30,7 @@ nav {
 }
 
 .logo img {
-    height: 30px; 
+    height: 40px; 
     margin-right: 10px; 
 }
 
@@ -297,6 +299,7 @@ nav {
 	position: relative;
 	width: 100%;
 	background: #2c3e50; /* darckblue */
+  overflow: hidden;
 }
 .myslide{
 	height: 655px;
@@ -427,10 +430,11 @@ nav {
 @media screen and (max-width: 800px){
 	.myslide{
 		height: 500px;
+    overflow: hidden;
 	}
 	.txt{
 		letter-spacing: 2px;
-		line-height: 25px;
+		line-height: 35px;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -471,7 +475,7 @@ nav {
   }
 
   .button1 {
-     margin-top: 40px;
+     margin-top: 50px;
   }
 
 }
@@ -576,7 +580,8 @@ nav {
   }
 
   .text-container .icon-2 {
-    margin-top: 90px;
+    margin-top: 60px;
+    margin-bottom: 40px;
     margin-left: 50px;
   }
 
@@ -589,16 +594,16 @@ nav {
 
   .text-container h2 {
     font-size: 30px;
-    margin-left: 115px;
+    margin-left: 95px;
   }
 
  .body-text-2 p {
     width: 280px;
-    margin-left: 50px;
+    margin-left: 20px;
   }
 
   .additional-text {
-    margin-left: 50px;
+    margin-left: 20px;
   }
   
 }
@@ -615,6 +620,7 @@ nav {
 .swiper-2 {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .swiper-slide-2 {
@@ -654,9 +660,11 @@ nav {
 
 .black-section-3{
   background-color: #fff;
+  overflow: hidden;
 }
 
 .section-header-2 {
+  overflow: hidden;
   
   justify-content: center;
  align-content: center;
@@ -808,6 +816,7 @@ nav {
 }
 
 .text-container {
+  overflow: hidden;
    padding: 30px;
    padding-right: 60px;
    width: 1500px;
@@ -846,7 +855,7 @@ nav {
 
 /* Style for the text within each slide */
 .swiper .swiper-slide h3 {
-  color: #fff; /* Change text color */
+  color: #2c3e50; /* Change text color */
   z-index: 2; /* Place text above the overlay */
   font-size: 30px;
 }
@@ -881,6 +890,10 @@ nav {
   .swiper-slide {
       width: 100%; /* Full width for mobile */
       height: 100%;
+  }
+
+  .swiper .swiper-slide::before {
+    display: none;
   }
 
   .swiper-slide img {
@@ -941,6 +954,12 @@ nav {
   font-size: 20px;
 }
 
+a.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 .swiper-2 {
   float: left;
@@ -977,6 +996,7 @@ nav {
   margin-top: 50px;
   color: #000;
 }
+
 
 .swiper-slide p {
   padding: 20px;
@@ -1040,19 +1060,25 @@ nav {
   }
 
   .body-text p {
-    width: 80%;
+    width: 90%;
   }
 
   .swiper-2 {
       margin: 0;
-      width: 1200px;
-      height: 260px;
+      width: 810px;
+      height: 330px;
   }
 
   .swiper-slide {
       width: 100%;
       height: auto;
 
+  }
+
+  .swiper-slide img {
+     object-fit: cover;
+     height: auto;
+     width: auto;
   }
 
   .swiper-slide h4 {
@@ -1070,7 +1096,7 @@ nav {
 
   .icon-4 i {
     padding-bottom: 50px;
-    margin-left: 90px;
+    margin-left: 60px;
   }
 }
 
@@ -1229,15 +1255,21 @@ nav {
 
  /* another section.. receive books section*/
 
+ .black-section {
+  background-color: #144e2d;
+  overflow: hidden;
+ }
 .receive-books {
   padding: 100px 0;
   background-color: #f5f5f5;
+  overflow: hidden;
 }
 
 .receive-content {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .section-header {
@@ -1981,7 +2013,7 @@ button[type="submit"] {
   }
 
   .book {
-    margin-left: 50px; /* Remove left margin for smaller screens */
+    margin-left: 20px; /* Remove left margin for smaller screens */
   }
 
   .book h2 {
@@ -2013,7 +2045,7 @@ button[type="submit"] {
   }
 
   .cta-button-2 {
-    margin-left: 120px;
+    margin-left: 60px;
 
   }
 
@@ -2146,7 +2178,7 @@ button {
 
 /* Style the initiatives sections */
 .initiative-section {
-  margin: 20px;
+  margin-top: -20px;
   padding: 20px;
   background-color: #f5f5f5;
   display: flex;
@@ -2156,26 +2188,66 @@ button {
 }
 
 .initiative-section img {
-  max-width: 100%;
-  height: auto;
+  margin-top: -150px;
+  width: 1350px;
+  height: 600px;
 }
 
-.swiper-4 {
+.slider-6 .dotsbox {
   width: 100%;
-  height: 100%;
+  height: 100px;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
+.slider-7 .dotsbox {
   width: 100%;
+  height: 100px;
 }
 
+.initiative-section-2 {
+  margin: 20px;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.initiative-section-2 img {
+  width: 1350px;
+  height: 500px;
+}
+
+.slider-8 .dotsbox {
+  width: 100%;
+  height: 100px;
+}
+
+.initiative-section-3 {
+  margin: 20px;
+  padding: 20px;
+  background-color: #882525;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.initiative-section-3 img {
+  width: 1350px;
+  height: 500px;
+}
+@media screen and (max-width: 768px) {
+  .initiative-section-3 img {
+    object-fit: cover;
+    width: 100%; /* Make the image take 100% of the container's width */
+    height: auto; /* Automatically adjust the height based on the image's aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its original width */
+
+  }
+}
 
 
 
