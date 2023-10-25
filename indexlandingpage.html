@@ -6,8 +6,15 @@
     <title>Book Website</title>
     <link rel="stylesheet" href="donatebook.css">
     <script src="https://kit.fontawesome.com/69f9015363.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="path/to/swiper.min.css">
-<script src="path/to/swiper.min.js"></script>
+    <!-- Add this inside the <head> section -->
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -32,16 +39,18 @@
 </header>
 
 
-    <section class="black-section">
-        <h2 class="section-header-2">Donate Books: How we work</h2>
-    </section>
+<header class="about-header">
+  <div class="header-content">
+    <h1>Donate Books: How we work</h1>
+  </div>
+</header>
 
 
     <section class="numbered-divs-section">   
         <div class="numbered-div div1" data-aos="fade-up" data-aos-duration="1000">
             <div class="number-circle">2</div>
             <div>
-            <img src="images/istockphoto-1460017019-612x612.jpg" alt="Image 2">
+            <img src="images/gettyimages-912791118-612x612.jpg" alt="Image 2">
             <p class="bold-text">A Peak Into Our Mind</p>
             <p>At Green ESI, we work passionately to promote literacy and empower those in need through the gift of books. Donating is easy - gather gently used books, drop them off at designated centers, or schedule pickups for larger contributions. 
              </p>
@@ -54,7 +63,7 @@
         <div class="numbered-div div2" data-aos="fade-up" data-aos-duration="1000">
             <div class="number-circle">2</div>
             <div>
-            <img src="images/istockphoto-1400800786-612x612.jpg" alt="Image 2">
+            <img src="images/gettyimages-648348944-612x612.jpg" alt="Image 2">
             <p class="bold-text">Book Donation Process</p>
             <p>Follow these simple steps to contribute to our book 
                 donation program: </p>
@@ -71,7 +80,7 @@
         <div class="numbered-div div3" data-aos="fade-up" data-aos-duration="1000">
             <div class="number-circle">2</div>
             <div>
-            <img src="images/istockphoto-1487776839-612x612.jpg" alt="Image 2">
+            <img src="images/gettyimages-631798792-612x612.jpg" alt="Image 2">
             <p class="bold-text">Book Sorting and Evaluation:</p>
             <p>Upon receiving the donated books, our team of dedicated 
                 volunteers will carefully evaluate each book's condition. 
@@ -87,7 +96,7 @@
         <div class="numbered-div div4" data-aos="fade-up" data-aos-duration="1000">
             <div class="number-circle">2</div>
             <div>
-            <img src="images/istockphoto-1182951595-612x612.jpg" alt="Image 2">
+            <img src="images/gettyimages-523787330-612x612.jpg" alt="Image 2">
             <p class="bold-text">Recipient Identification</p>
             <p>When identifying recipients for book donations, you will 
                 consider factors such as the number of copies available, 
@@ -106,7 +115,7 @@
         <div class="numbered-div div5" data-aos="fade-up" data-aos-duration="1000">
             <div class="number-circle">2</div>
             <div>
-            <img src="images/istockphoto-1485227968-612x612.jpg" alt="Image 2">
+            <img src="images/gettyimages-157157664-612x612.jpg" alt="Image 2">
             <p class="bold-text">Book Delivery and Impact</p>
             <p>During book delivery, the number of copies provided to 
                 each recipient will be documented. This tracking allows 
@@ -230,30 +239,55 @@
   </div>
 
 
-      <footer>
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="images/IMG_0605.PNG" alt="Your Book Website Logo">
-    </div>
-    <div class="footer-links">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-social">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2023 Your Book Website. All rights reserved.</p>
-    <p>Contact: contact@bookwebsite.com</p>
-  </div>
-</footer>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <!-- Desktop version -->
+        <div class="footer-content">
+            <div class="footer-column">
+                <img src="images/IMG_0605-removebg-preview.png" alt="Logo" width="100">
+                <h3>Greenesibooks</h3>
+                <p>Contact Information:</p>
+                <p>Email: Greenesibooks@gmail.com</p>
+                <p>Phone: (+234) 9031502701</p>
+                <p>WhatsApp:(+234) 9031502701</p>
+            </div>
+  
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="indexlandingpage.html">Donate Books</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <!-- Add more links here -->
+                </ul>
+            </div>
+            <div class="footer-column">
+              <h3>What We Do</h3>
+              <ul>
+                  <li><a href="ourinitiatives.html">Library Building Projects</a></li>
+                  <li><a href="ourinitiatives.html">Education Initiatives</a></li>
+                  <li><a href="ourinitiatives.html">Mobile Libraries</a></li>
+                  <li><a href="ourinitiatives.html">Book Recycling Programs</a></li>
+                  <!-- Add more links here -->
+              </ul>
+          </div>
+          <div class="footer-right">
+            <!-- Existing content -->
+            <!-- ... -->
+            <div class="receive-books-2">
+              <h4>Receive Books</h4>
+              <div class="arrow-icon">
+                <i class="fas fa-arrow-circle-down"></i>
+              </div>
+              <a href="book.html" onclick="redirectToForm()" class="button11">Receive a Book</a>
+            </div>
+            <!-- ... -->
+          </div>
+      </div>
+      <div class="footer-line"></div>
+      <p>&copy; 2023 Greenesibooks</p>
+  </footer>
 
       
       
