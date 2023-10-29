@@ -28,6 +28,24 @@ const animateOnScroll = (entries, observer) => {
 const observer = new IntersectionObserver(animateOnScroll, options);
 divsToAnimate.forEach(div => observer.observe(div));
 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
 
 //Another update for websitr, in October again= first section 
 
@@ -236,6 +254,7 @@ function isInViewport(element) {
     // Function to show or hide the additional fields based on the selected donation type
     function handleDonationTypeChange() {
       const selectedType = donationTypeSelect.value;
+      console.log("Selected donation type: " + selectedType); // Add this line
 
       if (selectedType === "money") {
         moneyFields.style.display = "block";
@@ -266,6 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
   donationForm.addEventListener("submit", function (event) {
     // Prevent the default form submission
     event.preventDefault();
+      console.log("Form submitted"); // Add this line
 
     // Show the popup
     popup.style.display = "block";
