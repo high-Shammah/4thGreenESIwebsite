@@ -917,7 +917,7 @@ nav {
 
   .swiper-slide img {
     object-fit: contain;
-    width: 40px;
+    width: 30px;
     height: 100%;
     z-index: 1;
   }
