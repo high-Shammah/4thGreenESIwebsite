@@ -1108,7 +1108,7 @@ a.no-underline {
 
   .text-container-2 h2 {
     font-size: 30px;
-    margin-left: 120px;
+    margin-left: 80px;
   }
 
   .body-text {
@@ -1124,7 +1124,7 @@ a.no-underline {
   .swiper-2 {
       margin: 0;
       width: 810px;
-      height: 400px;
+      height: 440px;
   }
 
   .swiper-slide {
@@ -1162,6 +1162,12 @@ a.no-underline {
 
 
 
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px
+}
 
 
 
@@ -2322,7 +2328,7 @@ button[type="submit"] {
 
 @media screen and (max-width: 768px) {
   .about-header {
-    padding: 260px;
+    padding: 230px;
   }
 
   .header-content h1 {
