@@ -103,11 +103,12 @@ nav {
 @media (max-width: 768px) {
     nav {
         padding: 0 20px; 
+        width: auto;
     }
 
     header {
-      width: 448px;
-      padding: 25px 0;
+      width: 550px;
+      padding: 25px auto;
     }
     
     .nav-links {
@@ -143,6 +144,13 @@ nav {
       display: none;
     }
 }
+
+
+
+
+
+
+
 
 .image-text-session {
   display: flex;
@@ -330,6 +338,18 @@ nav {
 	overflow: hidden;
 }
 
+
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
+  pointer-events: none; /* Allow interactions with elements underneath */
+  z-index: 1;
+}
+
 .prev, .next{
 	position: absolute;
 	top: 50%;
@@ -396,7 +416,7 @@ nav {
 	color: #fff;
 	letter-spacing: 2px;
 	line-height: 35px;
-	top: 40%;
+	top: 30%;
 	left: 15%;
 	-webkit-animation-name: posi;
   	-webkit-animation-duration: 2s;
@@ -423,6 +443,7 @@ nav {
 	margin-bottom: 20px;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 10vb;
 }
 .txt p{
 	font-weight: bold;
@@ -437,7 +458,24 @@ nav {
   	-webkit-animation-duration: 40s;
   	animation-name: zoomin;
   	animation-duration: 40s;
+    background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        width: auto;
+        
 }
+
+.myslide img .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
+  pointer-events: none; /* Allow interactions with elements underneath */
+
+}
+
 @-webkit-keyframes zoomin {
   from {transform: scale(1, 1);}
   to {transform: scale(1.5, 1.5);}
@@ -483,6 +521,7 @@ nav {
 
 	.txt h1{
 		font-size: 40px;
+    line-height: 7vh;
 	}
 	.txt p{
 		font-size: 13px;
@@ -863,8 +902,16 @@ nav {
   text-align: center;
   transition: transform 0.2s;
   border: 5px solid #ebebeb; /* Add border to the cards */
+  /* Change background color */
+  border: 1px solid #bacdd8;
+
+  /* Add space between the border and the content */
+  padding: 8px;
+
+  border-radius: 12px;
 
 }
+
 
 .card:hover {
   transform: scale(1.05);
@@ -872,8 +919,10 @@ nav {
 
 /* Style card images */
 .card img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  border-radius: 12px;
+  height: 214px;
+  object-fit: cover;
 }
 
 /* Style card text */
@@ -890,12 +939,22 @@ nav {
 
 @media screen and (max-width: 768px) {
   .card-section {
-    height: 1100px;
+    height: 2100px;
     padding: 20px;
     padding-top: 100px;
   }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
   .card {
-    flex: 0 0 calc(33.33% - 20px);
+    margin-left: 0;
+    width: 90%;
+    margin-bottom: 20px;
+    height: auto;
   }
 }
 
@@ -968,6 +1027,7 @@ a.no-underline {
 .swiper-slide {
   height: 50px;
   background: #882525;
+  color: #fff;
   line-height: 30px;
   width: 50px;
   text-align: center;
@@ -989,12 +1049,15 @@ a.no-underline {
   font-size: 16px;
   margin-top: 50px;
   color: #000;
+  line-height: 5vh;
 }
 
 
 .swiper-slide p {
   padding: 20px;
   color: #000;
+  line-height: 3.5vh;
+  text-align: left;
 }
 
 .icon-3 i {
@@ -1060,7 +1123,7 @@ a.no-underline {
   .swiper-2 {
       margin: 0;
       width: 810px;
-      height: 330px;
+      height: 300px;
   }
 
   .swiper-slide {
@@ -1082,6 +1145,7 @@ a.no-underline {
 
   .swiper-slide p {
       padding: 10px;
+      line-height: 5vh;
   }
 
   .icon-3 i {
@@ -1156,6 +1220,7 @@ a.no-underline {
   margin-left: 240px;
   background-color: #fbefef;
   color: #000;
+  line-height: 3.5vh;
 }
 
 .section-header i {
@@ -1238,6 +1303,7 @@ a.no-underline {
     margin-left: 0;
     text-align: center;
     padding: 20px;
+    line-height: 5vh;
   }
 
   .our-story,
@@ -1308,6 +1374,13 @@ a.no-underline {
   background-color: #144e2d;
 }
 
+@media (max-width: 768px) {
+  .section-description{
+    padding: 10px;
+    line-height: 5vh;
+  }
+}
+
 
 
 
@@ -1787,2431 +1860,103 @@ button[type="submit"] {
 }
 
 /* Style for the book list section */
-.book-list {
+
+
+.book-card img {
+
+  width: 100%;
+  border-radius: 12px;
+  height: 214px;
+  object-fit: cover;
+}
+
+#container {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.book {
-  max-width: 300px;
-  text-align: center;
-  justify-content: space-between ;
-  margin-bottom: 20px;
-  margin-left: 120px;
-}
-
-.book img {
-  width: 100%;
-  height: auto;
-}
-
-.book h2 {
-  font-size: 24px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.book p {
-  font-size: 16px;
-}
-
-/* Style for the call to action section */
-.cta-section {
-  background-color: #2E8B57;
-  text-align: center;
-  padding: 40px 0;
-}
-
-.cta-section h2 {
-  font-size: 28px;
-}
-
-.cta-section p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-/* Style for call to action button */
-.cta-button {
-  background-color: #2E8B57;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.cta-button:hover {
-  background-color: #2E8B57;
-}
-
-
-/* Style for the book categories section */
-.book-categories {
-  margin: 20px 360px;
-  align-items: center;
-
-}
-
-/* Style for each book category */
-.category {
-  margin-bottom: 60px;
-  align-items: center;
-}
-
-/* Style for category subheader */
-.category h2 {
-  font-size: 28px;
-  margin-bottom: 60px;
-  margin-left: 270px;
-}
-
-/* Style for individual books */
-.book {
-  display: inline-block;
-  width: 30%; /* Adjust as needed for spacing */
-  margin-right: 2%; /* Adjust as needed for spacing */
-  text-align: center;
-  align-items: center;
-}
-
-.book img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.book h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.book p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-/* Style for the call to action section */
-.cta-section {
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 40px 0;
-}
-
-.cta-section h2 {
-  font-size: 28px;
-}
-
-.cta-section p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-/* Style for call to action button */
-.cta-button {
-  background-color: #2E8B57;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.cta-button:hover {
-  background-color: #2E8B57;
-}
-
-/* Style for the "Apply for Book" button */
-.cta-button {
-  background-color: #2E8B57;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 30px;
-  display: inline-block;
-}
-
-.cta-button-2{
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 300px;
-}
-
-
-.cta-button:hover {
-  background-color: #2E8B57;
-}
-
-/* Style for the "Apply for More Books" button */
-.category p a.cta-button-2 {
-  background-color: #333;
-  margin-top: 10px;
-}
-
-.category p a.cta-button-2:hover {
-  background-color: #555;
-}
-
-
-/* Your existing CSS styles here */
-
-/* Media query for screens with a maximum width of 768px (mobile devices) */
-@media screen and (max-width: 768px) {
-  /* Style for the page header on smaller screens */
-  .page-header {
-    padding: 20px 0; /* Adjust the padding for smaller screens */
-  }
-
-  .book-categories {
-    margin: 40px;
-    justify-content: space-between;
-    align-items: center;
-  
-  }
-
-    /* Media query for screens smaller than 768px */
-@media screen and (max-width: 768px) {
-  .book {
-      margin-left: 100px;
-    width: 100%; /* Single column on screens 768px and smaller */
-  }
-
-  /* Adjust spacing for smaller screens */
-  .book-categories {
-      margin-left: 15px;
-    gap: 3px;
-  }
-
-  /* Center the call-to-action buttons */
-  .cta-button {
-    margin: 0 auto;
-  }
-}
-
-
-
-  .page-header h1 {
-    font-size: 28px; /* Reduce font size for smaller screens */
-  }
-
-  .page-header p {
-    font-size: 16px; /* Reduce font size for smaller screens */
-  }
-
-  /* Style for the book list section on smaller screens */
-  .book-list {
-    justify-content: center; /* Center-align items on smaller screens */
-  }
-
-  .book {
-    margin-left: 20px; /* Remove left margin for smaller screens */
-  }
-
-  .book h2 {
-    font-size: 20px; /* Reduce font size for smaller screens */
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
-  }
-
-  .book p {
-    font-size: 14px; /* Reduce font size for smaller screens */
-  }
-
-  /* Style for the call to action section on smaller screens */
-  .cta-section {
-    padding: 20px 0; /* Adjust the padding for smaller screens */
-  }
-
-  .cta-section h2 {
-    font-size: 24px; /* Reduce font size for smaller screens */
-  }
-
-  .cta-section p {
-    font-size: 16px; /* Reduce font size for smaller screens */
-  }
-
-  /* Style for call to action buttons on smaller screens */
-  .cta-button {
-    font-size: 16px; /* Reduce font size for smaller screens */
-    margin-bottom: 20px; /* Adjust margin for smaller screens */
-  }
-
-  .cta-button-2 {
-    margin-left: 60px;
-
-  }
-
-  /* Style for category subheaders on smaller screens */
-  .category h2 {
-    font-size: 24px; /* Reduce font size for smaller screens */
-    margin-bottom: 20px; /* Adjust margin for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
-  }
-}
- 
-
-
-
-
-
-
-  /* Style for the header with background image ABOUT PAGE */
-.about-header {
-  background-image: url('images/992b5a52c79a9f715088d0a82648d009.jpg'); /* Replace with your background image path */
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* Text color on top of the background image */
-  text-align: center;
-  padding: 100px 0;
-}
-
-.header-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.header-content h1 {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.header-content p {
-  font-size: 18px;
-}
-
-/* Style for the main content */
-.about-content {
-  text-align: center;
-  padding: 40px;
-}
-
-.about-description {
-  margin-bottom: 100px;
-}
-
-.about-description h2 {
-  font-size: 24px;
-}
-
-
-.other-captivating-content h2 {
-  font-size: 24px;
-}
-
-.other-captivating-content ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.other-captivating-content li {
-  margin-bottom: 10px;
-}
-
-
-
-
-/* contact us page */
-
-.contact-form {
-  background-color: #fff;
+  justify-content: space-between;
   max-width: 600px;
+
+  /* Center the container in middle on horizontal axis */
   margin: 0 auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+
+  /* Add empty space above the container (20% of the view height) */
+  margin-top: 3vh;
 }
 
-.contact-form h2 {
+.book-card {
+  /* Change background color */
+  background-color: white;
+
+  /* Add border */
+  border: 1px solid #bacdd8;
+
+  /* Add space between the border and the content */
+  padding: 8px;
+
+  border-radius: 12px;
+  width: 400px;
+  margin-left: 50px;
+
+  
+}
+
+
+/* Style div elements that have class equal to tag */
+.tag {
+  padding: 4px 8px;
+  border: 1px solid #e5eaed;
+
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #788697;
+}
+
+/* Style div elements that have class equal to name */
+.name {
   font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.input-container {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.congratulations-image img {
-  max-width: 100%;
-  display: block;
-  margin: 20px auto;
-}
-
-
-
-
-
-
-
-/* our initiative stand alone page */
-
-/* Style the initiatives sections */
-.initiative-section {
-  margin-top: -20px;
-  padding: 20px;
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.initiative-section img {
-  margin-top: -150px;
-  width: 1350px;
-  height: 600px;
-}
-
-.slider-6 .dotsbox {
-  width: 100%;
-  height: 100px;
-}
-
-.slider-7 .dotsbox {
-  width: 100%;
-  height: 100px;
-}
-
-.initiative-section-2 {
-  margin: 20px;
-  padding: 20px;
-  background-color: #2c3e50;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.initiative-section-2 img {
-  width: 1350px;
-  height: 500px;
-}
-
-.slider-8 .dotsbox {
-  width: 100%;
-  height: 100px;
-}
-
-.initiative-section-3 {
-  margin: 20px;
-  padding: 20px;
-  background-color: #882525;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.initiative-section-3 img {
-  width: 1350px;
-  height: 500px;
-}
-@media screen and (max-width: 768px) {
-  .initiative-section-3 img {
-    object-fit: cover;
-    width: 100%; /* Make the image take 100% of the container's width */
-    height: auto; /* Automatically adjust the height based on the image's aspect ratio */
-    max-width: 100%; /* Ensure the image doesn't exceed its original width */
-
-  }
-}
-
-
-
-
-
-
-
-/* Base styles for the footer */
-
-.site-footer {
-  background-color: #144e2d;
-  color: #fff;
-  padding: 20px;
-
-}
-
-/* For the desktop version */
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer-column {
-  flex: 1;
-  margin: 10px;
-}
-.footer-column h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column li {
-  margin-bottom: 8px;
-}
-
-.footer-column a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.footer-line {
-  padding-right: 10px; /* Adjust the spacing as needed */
-  background-color: #fff;
-  height: 2px;
-  width: 1400px;
-  margin: 10px 0;
-}
-
-
-.footer-left {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.footer-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-right p {
-  display: inline;
-  margin-right: 10px;
-}
-
-
-.receive-books-2 {
-  text-align: center;
-  margin-bottom: 20px;
-  background-color: #144e2d;
-}
-
-.receive-books-2 h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.receive-books-2 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.receive-books-2 ul li {
-  margin-bottom: 5px;
-}
-
-.receive-books-2 ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.arrow-icon i {
-  font-size: 30px;
-  margin: 10px 0;
-}
-
-
-.button11{ background-color: #4CAF50; /* Green color for the primary button */
-  color: #fff; /* White text color */
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-
-/* Add responsive styles for smaller screens */
-@media (max-width: 768px) {
-  .site-footer {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .footer-left, .footer-right {
-    flex: 1;
-    padding: 0;
-  }
-  .footer-line {
-    margin: 0;
-    width: auto;
-  }
-  .receive-books-2 {
-    text-align: left;
-    margin-left: 10px;
-  }
-
-
-
- /* Media query for mobile responsiveness */
- @media (max-width: 768px) {
-  .footer-column {
-      flex-basis: 100%;
-      align-items: flex-start;
-      
-      
-  }
-}
-}body {
-    margin: 0;
-    padding: 0;
-    margin-left: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    font-family: 'Inter',sans-serif;
-   
-}
-
-header {
-    background-color: #EBFBF2;
-    color: #000;
-    padding: 30px 0;
-    z-index: 99999;
-  width: 1430px;
-  position: absolute;
-    
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px; 
-    
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.logo img {
-    height: 40px; 
-    margin-right: 10px; 
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
-    justify-content: center; 
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #000;
-    text-decoration: none;
-}
-
-.cta-button {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.button10{ background-color: #4CAF50; /* Green color for the primary button */
-  color: #fff; /* White text color */
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-
-}
-
-.burger {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    nav {
-        padding: 0 20px; 
-    }
-
-    header {
-      width: 428px;
-      padding: 25px 0;
-    }
-    
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        background-color: #2E8B57;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 1; 
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .burger {
-        display: block;
-        z-index: 2; /* Ensure the burger icon (sidebar) is on top of other content */
-    }
-
-    .logo-text {
-      font-size: 24px;
-    }
-
-   
-    .nav-links.show {
-        display: flex;
-    }
-    .button10 {
-      display: none;
-    }
-}
-
-.image-text-session {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Align items vertically in the center */
-  padding: 20px;
-  background-color: #fff;
-  padding: 70px 80px; 
-  margin-bottom: 30px;
-  flex-direction: row-reverse; /* Change the flex direction */
-}
-
-
-.text-content h1 {
-  font-size: 55px;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-.text-content p {
-  font-size: 26px;
-  color: #777;
-}
-
-
-.image-container img {
- width: 700px;
-  height: 500px; 
-  object-fit: cover; 
-  border-radius: 10px;
-}
-/* Style for buttons */
-.button1 {
-  background-color: #4CAF50; /* Green color for the primary button */
-  color: #fff; /* White text color */
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.button2 {
-  background-color: #fff; /* Blue color for the secondary button */
-  color: #4CAF50; /* White text color */
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-    border: 1px solid #4CAF50;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-/* Adjust placement of images and text */
-.image-text-session {
-  display: flex;
-  justify-content: space-between;
-}
-
-.text-content {
-  flex: 1;
-  padding: 20px;
-  order: 2; /* Change the order to make text come before image */
-}
-
-.image-container {
-  flex: 1;
-  text-align: left; /* Align the image to the left */
-  order: 1; /* Change the order to make image come after text */
-}
-
-/* Add any other styles you need for the image and text here */
-
-
-
-/* Mobile responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .image-text-session {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .text-content h1 {
-      font-size: 30px;
-      text-align: center;
-      margin-top: -50px;
-      width: 100%;
-      max-width: 500px;
-      order: 1;
-  }
-
-  .text-content p {
-      font-size: 14px;
-      text-align: center;
-      margin-top: -30px;
-      margin-bottom: 70px;
-  }
-
-  .image-container {
-      margin-top: 5px;
-      order: 3;
-  }
-  .image-container img {
-      width: 420px;
-       height: 290px; 
-       object-fit: cover; 
-       border-radius: 10px;
-       order: 3;
-   }
-
-  
-   .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: -20px;
-      margin-bottom: 30px;
-      order: 2;
-  }
-
-  .button1 {
-    display: block;
-    background-color: #2E8B57;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    width: 300px;
-    order: 1;
-}
-
-.button2 {
-  display: block;
-  background-color: #fff;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: default;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  width: 300px;
-  order: 2;
-}
-
-
-
-  .break-mobile {
-      display: none;
-  }
-
-  .text-content h1 br {
-      display: none; 
-  }
- }
-
-
-
- /* Another update for websitr, in October again= first section */
-
-
-/* 4th trier again for swiping again */
-.slider{
-	position: relative;
-	width: 100%;
-	background: #2c3e50; /* darckblue */
-  overflow: hidden;
-  z-index: 4;
-}
- 
-.myslide{
-	height: 655px;
-	display: none;
-	overflow: hidden;
-}
-
-.prev, .next{
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-	font-size: 50px;
-	padding: 15px;
-	cursor: pointer;
-	color: #fff;
-	transition: 0.1s;
-	user-select: none;
-}
-.prev:hover, .next:hover{
-	color: #144e2d; /* blue */
-}
-.next{
-	right: 0;
-}
-.dotsbox{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-	bottom: 20px;
-	cursor: pointer;
-}
-.dot{
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	margin: 0 10px;
-	cursor: pointer;
-}
-/* /2 */
-
-/* javascript */
-.active, .dot:hover{
-	border-color: #144e2d; /* blue */
-}
-/* /javascript */
-
-/* muslide add fade */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: 0.8}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: 0.8}
-  to {opacity: 1}
-}
-/* /muslide add fade */
-
-/* 3 */
-.txt{
-	position: absolute;
-	color: #fff;
-	letter-spacing: 2px;
-	line-height: 35px;
-	top: 40%;
-	left: 15%;
-	-webkit-animation-name: posi;
-  	-webkit-animation-duration: 2s;
-  	animation-name: posi;
-  	animation-duration: 2s;
-    z-index: 2;
-}
-
-@-webkit-keyframes posi {
-  from {left: 25%;}
-  to {left: 15%;}
-}
-
-
-@keyframes posi {
-  from {left: 25%;}
-  to {left: 15%;}
-}
-
-.txt h1{
-	color: #fff;
-  font-weight: bolder;
-	font-size: 50px;
-	margin-bottom: 20px;
-  font-style: oblique;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.txt p{
-	font-weight: bold;
-	font-size: 20px;
-}
-/* /3 */
-
-/* 4 */
-.myslide img{
-	transform: scale(1.5, 1.5);
-	-webkit-animation-name: zoomin;
-  	-webkit-animation-duration: 40s;
-  	animation-name: zoomin;
-  	animation-duration: 40s;
-}
-@-webkit-keyframes zoomin {
-  from {transform: scale(1, 1);}
-  to {transform: scale(1.5, 1.5);}
-}
-
-
-@keyframes zoomin {
-  from {transform: scale(1, 1);}
-  to {transform: scale(1.5, 1.5);}
-}
-/* /4 */
-
-
-
-/* 5 */
-@media screen and (max-width: 800px){
-	.myslide{
-		height: 500px;
-    overflow: hidden;
-	}
-	.txt{
-		letter-spacing: 2px;
-		line-height: 35px;
-		top: 60%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		-webkit-animation-name: posi2;
-		-webkit-animation-duration: 2s;
-		animation-name: posi2;
-		animation-duration: 2s;
-	}
-
-	@-webkit-keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-
-	@keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-	.txt h1{
-		font-size: 40px;
-	}
-	.txt p{
-		font-size: 13px;
-	}
-
-  .prev, .next{
-    margin-top: 80px;
-    font-size: 30px;
-  }
-
-  .dot{
-    display: none;
-  }
-
-  .button2 {
-    display: none;
-  }
-
-  .button1 {
-     margin-top: 90px;
-  }
-
-}
-/* /5 */
-
-/* 6 */
-@media screen and (max-width: 520px){
-	.txt h1{
-		font-size: 30px;
-		margin-bottom: 20px;
-    font-weight: bolder;
-	}
-	.sign{
-		margin-right: 20px;
-	}
-	.sign a{
-		font-size: 12px;
-	}
-}
-/* /6 */
-
-
-
-/* Another update for websitr, in October again= SECOND section */
-
-.content-section {
-  display: flex;
-  margin: 20px;
-  padding: 100px;
-  overflow: hidden;
-  margin-top: -20px;
-  margin-left: -30px;
-  width: 100%;
-  height: 300px;
-  background-image: url(images/Simple\ Storytelling.gif);
-  
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
-  pointer-events: none; /* Allow interactions with elements underneath */
-}
-
-.image-container-2 {
-  position: relative;
-}
-
-.image-container-2 img {
-  width: 470px; /* Adjust the image dimensions as needed */
-  height: 350px;
-  margin-top: -20px;
-  border-radius: 3px;
-}
-
-
-.text-container {
-  margin-left: 500px;
-  color: #fff;
-  margin-top: -350px;
-  padding: 50px;
-  width: 50%;
-  bottom: 0;
-}
-
-.text-container h2 {
-  font-size: 36px;
-}
-
-.text-container .icon-2 {
-  font-size: 40px;
-  margin-right: 303px;
-  justify-content: space-between;
-  color: #007bff;
-}
+  font-weight: 600;
 
-.text-container .body-text-2 {
-  font-size: 16px;
-  top: 20px;
-  width: 50%;
-  
+  margin-top: 16px;
 }
 
-.text-container .additional-text {
+/* Style p element */
+.name p {
   font-size: 14px;
+  color: #7f8c9b;
+  line-height: 150%;
 }
 
-/* Media query for mobile responsiveness */
-@media screen and (max-width: 768px) {
-  .content-section {
-      flex-direction: column;
-      height: 450px; /* Adjust the height as needed */
-      padding: 20px; /* Adjust the padding for mobile */
-      overflow: hidden;
-  }
-
-  .image-container-2 img {
-      display: none; /* Hide the image for mobile */
-  }
-
-  .text-container .icon-2 {
-    margin-top: 60px;
-    margin-bottom: 40px;
-    margin-left: 50px;
-  }
-
-  .text-container {
-      margin-left: 0;
-      margin-top: 0;
-      padding: 20px;
-      width: 100%;
-  }
-
-  .text-container h2 {
-    font-size: 30px;
-    margin-left: 95px;
-  }
-
- .body-text-2 p {
-    width: 280px;
-    margin-left: 20px;
-  }
-
-  .additional-text {
-    margin-left: 20px;
-  }
-  
-}
-
-
-
-
-
-
-
-
-
-/* our initiative section for anoother swiper secion 2 */
-.swiper-2 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.swiper-slide-2 {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide-2 img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-
-
-
-
-
-
-
-
-/* Computer screen styles */
-/* Default styles */
-/* Add your default styles here */
-
-
-
-
-
-/* 3rd section ..... who we provide books for section*/
-
-.black-section-3{
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.section-header-2 {
-  overflow: hidden;
-  
-  justify-content: center;
- align-content: center;
- margin-left: 500px;
- height: 100px;
- color: #000;
- background-color: #fff;
-}
-
-.section-header-2 h2 {
-  margin-top: 70px;
-}
-
-  .picture-slider {
-      overflow: hidden; 
-      margin-top: -20px;
-      background-color: #fff;
-    }
-    
-    .picture-container {
-      display: flex; 
-      background-color: #fff;
-      animation: slide 20s linear infinite; 
-    }
-    
-    .picture-container img {
-      width: 422px;
-      height: 196px;
-      margin-right: 20px;
-      border-radius: 7px;
-    }
-
-    .picture-container { 
-      margin-bottom: 20px;
-      background-color: #000;
-    }
-  
-
-.slider1 {
-  animation: slide1 10s linear infinite; 
-}
-
-.slider2 {
-  animation: slide2 8s linear infinite; 
-}
-
-@keyframes slide1 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
-@keyframes slide2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); 
-  }
-}
-
-
-/* Mobile responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .picture-slider {
-    overflow: hidden;
-    margin-bottom: 90px;
-  }
-
-  .picture-container {
-    display: flex;
-    flex-wrap: nowrap; 
-  }
-
-  .picture-slider img {
-      width: 190px; 
-      height: 100px; 
-      object-fit: cover; 
-    }
-
-  .slider1 {
-    animation: slide1 10s linear infinite; /* Adjust the animation duration as needed */
-  }
-
-  .slider2 {
-    animation: slide2 8s linear infinite; 
-  }
-
-  /* Keyframes for sliding animation for slider 1 */
-  @keyframes slide1 {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%); 
-    }
-  }
-
-  /* Keyframes for sliding animation for slider 2 */
-  @keyframes slide2 {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%); 
-    }
-  }
-
-  /* Media query for mobile responsiveness */
-
-  .section-header-2 {
-      margin-left: 0;
-      text-align: center; /* Center text on mobile */
-      font-size: 20px;
-  }
-
-  .section-header-2 h2 {
-    font-size: 16px;
-      margin-top: 60px; /* Adjust the spacing for mobile */
-      
-  }
-
-}
-
-
-
-
-
-
-/* our initiative section for anoother swiper secion 2 */
-
-.thrid-section-initiatives {
-  padding: 40px;
-   overflow: hidden;
-   align-items: center;
-   background-color: #2c3e50;
-   height: 600px;
-}
-
-.thrid-section-initiatives h2 {
-  color: #fff;
-  padding-bottom: 80px;
-  font-size: 30px;
-  margin-left: 600px;
-}
-
-.text-container {
-  overflow: hidden;
-   padding: 30px;
-   padding-right: 60px;
-   width: 1500px;
-   bottom: 440px;
-   padding-bottom: 400px;
-   top: 300px;
-}
-
-.swiper {
- width: 100%;
- left: 30px;
- padding-top: 50px;
- padding-bottom: 50px;
- height: 350px;
- width: 1200px;
-}
-
-.swiper-slide {
- background-position: center;
- background-size: cover;
- width: 100px;
- height: 200px;
-}
-
-/* Pseudo-element to create the overlay */
-
-
-/* Style for the text within each slide */
-.swiper .swiper-slide h3 {
-  color: #fff; /* Change text color */
-  z-index: 2; /* Place text above the overlay */
-  font-size: 30px;
-}
-
-
-.swiper-slide img {
- display: block;
- width: 100%;
-}
-
-/* Media query for mobile responsiveness */
-@media screen and (max-width: 768px) {
-
-  .thrid-section-initiatives {
-    margin-left: -100px;
-    height: 400px;
-    overflow: hidden;
-  }
-
-  .thrid-section-initiatives h2 {
-      font-size: 24px;
-      text-align: center;
-      margin-left: 100px;
-  }
-
-  .swiper {
-      margin-top: -40px;
-      width: 1200px; /* Full width for mobile */
-      height: 200px;
-  }
-
-  .swiper-slide {
-      width: 100%; /* Full width for mobile */
-      height: 100%;
-  }
-
-  .swiper .swiper-slide::before {
-    display: none;
-  }
-
-  .swiper-slide img {
-    object-fit: contain;
-    width: 30px;
-    height: 100%;
-    z-index: 1;
-  }
-  .swiper-slide h3 {
-      font-size: 22px;
-      text-align: center;
-      margin-bottom: 10px;
-      font-weight: bold;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-   /* For new landing page... newsliding left and right */
-
-
-   .books-we-accept-section-2 {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    background-color: #f5f5f5;
-    height: 500px;
-    padding: 30px;
- 
-}
-
-.icon-4 i {
-  font-size: 50px;
-  color: #144e2d;
- margin-right: 40px;
-}
-
-.text-container-2 {
-   /* Set a width for the text container, adjust as needed */
-   float: left;
-   width: 30%;
-     padding: 20px; /* Optional padding for spacing */
-     margin-top: 40px;
-     bottom: 200px; 
-     color: #000;
-}
-
-.text-container-2 h2 {
-  font-size: 36px;
-}
-
-.body-text {
-  font-size: 20px;
-}
-
-a.no-underline {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-
-.swiper-2 {
-  float: left;
-  margin-left: 500px;
-  margin-bottom: 200px;
-  margin-top: -300px;
-  width: 800px;
-  height: 400px;
-  overflow: hidden;
-}
-
-.swiper-slide {
-  height: 50px;
-  background: #882525;
-  line-height: 30px;
-  width: 50px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide h4{
-  font-size: 16px;
-  margin-top: 50px;
-  color: #000;
-}
-
-
-.swiper-slide p {
-  padding: 20px;
-  color: #000;
-}
-
-.icon-3 i {
-  font-size: 24px; /* Adjust the size as needed */
-  color: #007bff; /* Adjust the color as needed */
-}
-
-.swiper-slide:nth-child(2) {
-  background: #fff;
-}
-
-.swiper-slide:nth-child(3) {
-  background: #fff;
-}
-
-.swiper-slide:nth-child(4) {
-  background: #fff;
-}
-
-.swiper-slide:nth-child(5) {
-  background: #fff;
-}
-
-.swiper-slide:nth-child(6) {
-  background: #96cc7d;
-}
-
-.swiper-slide:nth-child(7) {
-  background: #cc7dae;
-}
-
-/* Your existing styles for larger screens */
-
-/* Media query for mobile responsiveness */
-@media screen and (max-width: 768px) {
-  .books-we-accept-section-2 {
-      display: block;
-      height: 700px;
-      padding: 10px; /* Adjust padding as needed */
-      margin-top: -80px;
-  }
-
-  .text-container-2 {
-      width: 100%;
-      margin: 0;
-      padding: 10px;
-  }
-
-  .text-container-2 h2 {
-    font-size: 30px;
-    margin-left: 90px;
-  }
-
-  .body-text {
-    font-size: 16px;
-    padding-bottom: 30px;
-  }
-
-  .body-text p {
-    width: 90%;
-  }
-
-  .swiper-2 {
-      margin: 0;
-      width: 810px;
-      height: 330px;
-  }
-
-  .swiper-slide {
-      width: 100%;
-      height: auto;
-
-  }
-
-  .swiper-slide img {
-     object-fit: cover;
-     height: auto;
-     width: auto;
-  }
-
-  .swiper-slide h4 {
-      margin-top: 20px;
-      font-size: 18px;
-  }
-
-  .swiper-slide p {
-      padding: 10px;
-  }
-
-  .icon-3 i {
-      font-size: 20px;
-  }
-
-  .icon-4 i {
-    padding-bottom: 50px;
-    margin-left: 60px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
- /* For new landing page... sliding left and right */
-
-
-
-
-
-
-  
-  
-  
-  
-
-
-  
-  
-  
-  
-
-/* End of new land page, slide page */
-
-/* Section headers....... This for the new landing page */
-.section-header {
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-  margin-top: 50px;
-  justify-content: center;
- 
-}
-
-.our-story,
-.our-vision,
-.our-mission {
-  background-color: #000;
-  margin-top: -50px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
-
-.section-header h2 {
-  font-size: 32px; /* Adjust as needed */
-  margin-top: 10px;
-  color: #fff;
-}
-
-.section-content {
-  align-items: center;
-  justify-content: center;
-  margin-left: 240px;
-  background-color: #000;
-  color: #fff;
-}
-
-.section-header i {
-  font-size: 36px;
-  color: #007bff;
-  margin-bottom: 10px;
-}
-
-/* Set initial state for sections */
-.section-header h2,
-.section-header i,
-.section-content {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* Animation for fading in sections */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply animations to section headers */
-.our-story .section-header,
-.our-vision .section-header,
-.how-to-help .section-header {
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.2s; /* Add delay for staggered animation */
-}
-
-/* Apply animations to sections when the "animate" class is added */
-.section-header.animate h2,
-.section-header.animate i,
-.section-content.animate {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-
-
-/* Small laptop screen styles */
-@media screen and (max-width: 1200px) {
-  /* Adjust default styles for small laptop screens */
-
-  .section-header h2 {
-    font-size: 28px; /* Adjust as needed */
-  }
-
-  .section-header i {
-    font-size: 32px;
-  }
-}
-
-
-/* Mobile screen styles */
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .section-header {
-    margin-left: 0;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .section-header h2 {
-    font-size: 28px; /* Adjust as needed */
-    margin-bottom: 10px;
-  }
-
-  .section-header i {
-    font-size: 32px;
-    margin-bottom: 5px;
-  }
-
-  .section-content {
-    margin-left: 0;
-    text-align: center;
-    padding: 20px;
-  }
-}
-  
-  
-  
-  
-
-
-
- /* another section.. receive books section*/
-
- .black-section {
-  background-color: #144e2d;
-  overflow: hidden;
- }
-.receive-books {
-  padding: 100px 0;
-  background-color: #f5f5f5;
-  overflow: hidden;
-}
-
-.receive-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
-}
-
-.section-header {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.section-description {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #666;
-}
-
-.cta-button {
-  margin-top: 40px;
-  background-color: #f5f5f5;
-}
-
-.button {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #2E8B57;
+/* Style button element */
+.card-button {
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #144e2d;
-}
-
-
-
-
-
-
-
-/* form section */
-.donation-form {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  padding: 50px;
-  background-color: #D8F0E3;
-  position: relative;
-  overflow: hidden;
-  margin-top: -10px;
-}
-
-.donation-form h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.forms-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 80%; /* Adjust the form width as needed */
-  max-width: 600px; /* Limit the maximum width of the form */
-  margin: 0 auto; /* Center the form horizontally */
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Style for form input fields */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input, select {
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#moneyFields, #booksFields {
-  display: none;
-}
-
-/* Style for the common fields that appear for both donation types */
-#name,
-#address,
-#email,
-#donationType {
-  display: block;
-}
-
-/* Style for the fields specific to donating money (additional fields) */
-#moneyFields input,
-#moneyFields select {
-  display: block;
-  width: 500px;
-  height: 30px; /* You can adjust the height as needed */
-  margin-bottom: 10px;
-}
-
-/* Style for the fields specific to donating books (additional fields) */
-#booksFields input,
-#booksFields select {
-  display: block;
-  width: auto;
-  height: 30px; /* You can adjust the height as needed */
-  margin-bottom: 10px;
-}
-
-/* Style for the "Submit" button */
-button[type="submit"] {
-  background-color: #2E8B57;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-/* Show appropriate fields when the donation type is selected */
-#donationType {
-  margin-bottom: 20px;
-}
-
-#donationType option {
-  display: block;
-}
-
-#donationType option[value="money"]:checked ~ #moneyFields,
-#donationType option[value="books"]:checked ~ #booksFields {
-  display: block;
-}
-
-/* Your existing CSS styles */
-
-/* Add the following media query for mobile responsiveness */
-
-/* Your existing CSS styles */
-
-/* Add the following media query for mobile responsiveness */
-
-@media (max-width: 767px) {
-  .forms-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%; /* Adjust the form width to fit the screen */
-    padding: 20px; /* Increase the padding for better spacing on mobile */
-  
-  }
-
-  form {
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-
-  /* Additional CSS styles for the common form fields */
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
- 
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  /* Additional CSS styles for the buttons */
-
-  button {
-    flex: 1;
-    padding: 10px;
-    background-color: #2E8B57;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-
- /* ... Other CSS rules ... */
-
- #moneyFields input,
- #moneyFields select {
-   width: 100%;
-   height: 30px;
-   margin-bottom: 10px;
- }
-
- /* Additional CSS styles for the fields specific to donating books (additional fields) */
- #booksFields input,
- #booksFields select {
-   width: 100%;
-   height: 30px;
-   margin-bottom: 10px;
- }
-
-/* Show the selected fields based on the donation type */
-#donationType {
-  width: 100%;
-  padding: 10px;
-}
-
-#donationType option[value="money"]:checked ~ #moneyFields {
-  display: block;
-}
-
-/* Adjust the styling of the "Donate Money" section for mobile */
-#moneyFields label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-#moneyFields input,
-#moneyFields select,
-#moneyFields textarea {
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
- /* Fix the issue with the label text in Currency Selection and Donation Frequency */
- #moneyFields label[for="currency"],
- #moneyFields label[for="donationFrequency"] {
-   display: inline-block; /* Set the label to be inline-block */
-   width: auto; /* Allow the label to take only the necessary width */
-   margin-right: 10px; /* Add a little spacing between the label and input */
- }
-}
-
-
-/* Styles for the popup */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.popup-content {
-  background-color: #fff;
-  padding: 20px;
+  padding: 12px 16px;
   border-radius: 10px;
-  text-align: center;
-  position: relative;
-}
-
-.close-popup {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  font-weight: 600;
+  color: #e0efff;
+  background-color: #2E8B57;
+  margin: 0 auto;
+  display: block;
   cursor: pointer;
 }
 
-/* Add other styles as needed for your popup content */
-
-
-
-
-/* another page, first section */
-
-
-.black-section {
-  background-color: #fff;
-  color: #000;
-  text-align: center;
-  padding: 50px;
-
+.card__details {
+  /* Add space around the details */
+  padding: 16px 8px 8px 8px;
 }
 
-.section-header-2 {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* Add style when button is focused or hovered */
+.card-button:focus,
+.card-button:hover {
+  background-color: #144e2d;
+  color: #e0efff;
 }
 
 
-.section-header h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.numbered-divs-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-  max-width: 1800px;
-  background-color: #fff;
-}
-
-.numbered-divs-section p{
-  max-width: 450px;
-}
-
-.numbered-div {
-  display: flex;
-  justify-content: center;
-  text-align: flex-start;
-  align-items: flex-start;
-  width: 45%; 
-  margin-bottom: 20px;
-  margin-bottom: 40px;
-  margin-right: 20px;
-}
-
-.number-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #2E8B57;
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.numbered-div.div1 {
-  margin-top: 0;
-}
-
-.numbered-div.div2 {
-  margin-top: 260px;
-}
-
-.numbered-div.div3 {
-  margin-top: -40px; 
-  margin-right: 40px;
-}
 
 
-.numbered-div.div4 {
-  margin-top: 250px; 
-  margin-right: 40px;
-}
 
-.numbered-div.div5 {
-  margin-top: -40px; 
-  margin-right: 850px;
-}
 
-.numbered-div .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 60px;
-}
 
-.numbered-div img {
-  width: 450px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 2%;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  display: inline-block;
-}
-
-.bold-text {
-  font-weight: bold;
-}
-
-/* Animation */
-.show-animation {
-  opacity: 0;
-  transform: translateY(200px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-      opacity: 10;
-      transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .black-section {
-      margin-top: -70px;
-  }
-
-  .section-header-2 {
-    margin-top: 60px;
-  }
-
-  .black-section h2 {
-    font-size: 26px;
-  }
-  
-  .numbered-divs-section {
-    align-items: flex-start;
-    padding: 10px; 
-  }
-
-  .numbered-div {
-    width: 90%; 
-    margin-right: 0;
-  }
-
-  .number-circle {
-      display: none;
-  }
-
-  .numbered-div img {
-      width: 300px;
-  }
-
-  .numbered-div.div1{
-      width: 300px;
-    }
-
-  .numbered-div.div2{
-    margin-top: 40px; 
-    width: 300px;
-  }
-
-  .numbered-div.div3 {
-      margin-top: 20px;
-      width: 300px;
-    }
-
-  .numbered-div.div4 {
-      margin-top: 40px;
-      width: 300px;
-  }
-
-  .numbered-div.div5{
-      margin-top: 40px;
-      margin-left: -40px;
-      margin-right: 0;
-      width: 300px;
-  }
-
-  .number-circle {
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
-    }
-  
-    .numbered-div img {
-      width: 100%; 
-      height: auto; 
-      margin-right: 0;
-    }
-  }
-
-/* Style for the page header BOOK PAGE, WHEN CLICKED ON RECEIVE BOOK*/
-.page-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  height: 300px;
-  padding: 60px 0;
-}
-
-.page-header h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 150px;
-}
-
-.page-header p {
-  font-size: 18px;
-}
-
-/* Style for the book list section */
 .book-list {
   display: flex;
   justify-content: space-around;
@@ -4407,6 +2152,18 @@ button[type="submit"] {
   
   }
 
+  #container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .book-card {
+    margin-left: 0;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
     /* Media query for screens smaller than 768px */
 @media screen and (max-width: 768px) {
   .book {
@@ -4474,7 +2231,7 @@ button[type="submit"] {
   }
 
   .cta-button-2 {
-    margin-left: 60px;
+    margin-left: 110px;
 
   }
 
