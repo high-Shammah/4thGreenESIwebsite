@@ -8,6 +8,10 @@ body {
    
 }
 
+html, body {
+  overflow-x: hidden;
+  }
+
 header {
     background-color: #EBFBF2;
     color: #000;
