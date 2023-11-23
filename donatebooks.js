@@ -47,6 +47,15 @@ function myFunction() {
 }
 
 
+
+
+// for button
+function redirectToForm() {
+  // You can customize this URL or add more logic if needed
+  window.location.href = "book.html";
+}
+
+
 //Another update for websitr, in October again= first section 
 
 
