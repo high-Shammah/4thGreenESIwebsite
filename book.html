@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Website</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="donatebook.css">
     <script src="https://kit.fontawesome.com/69f9015363.js" crossorigin="anonymous"></script>
     <!-- Add this inside the <head> section -->
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <body>
-
   <header id="myHeader">
     <nav>
 
         <div class="logo">  
           <img src="images/IMG_0605-removebg-preview.png" alt="Logo">
-          <span class="logo-text">Greenesibooks</span>
+          <span class=" font-serif logo-text">Greenesibooks</span>
         </div>
 
 
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About us</a></li>
-            <li><a href="indexlandingpage.html">Donate books</a></li>
-            <li><a href="book.html">Receive books</a></li>
+            <li class="font-serif"><a href="index.html">Home</a></li>
+            <li class="font-serif"><a href="AboutUs.html">About us</a></li>
+            <li class="font-serif"><a href="indexlandingpage.html">Donate books</a></li>
+            <li class="font-serif"><a href="book.html">Receive books</a></li>
         </ul>
-        <a href="book.html" onclick="redirectToForm()" class="button10">Receive a Book</a>
+        <a href="book.html" onclick="redirectToForm()" class=" font-serif button10">Receive a Book</a>
         <div class="burger">&#9776;</div>
     </nav>
     
@@ -40,8 +50,8 @@
 
 
   <section class="page-header">
-    <h1>Free Books</h1>
-    <p>Explore a selection of books available for free.</p>
+    <h1 class="font-serif">Free Books</h1>
+    <p class="font-serif">Explore a selection of books available for free.</p>
   </section>
 
 
@@ -50,7 +60,7 @@
   <section class="book-categories">
     <!-- Category 1 -->
     <div class="category">
-      <h2>Secondary Books</h2>
+      <h2 class="font-serif font-bold ">Secondary Books</h2>
 
   <!-- A div with container id to hold the card -->
   <div id="container">
@@ -63,16 +73,16 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Secondary</span>
+        <span class=" font-serif tag">Secondary</span>
 
-        <span class="tag">Learn</span>
+        <span class=" font-serif tag">Learn</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">New General Mathematics</div>
+        <div class=" font-serif name">New General Mathematics</div>
 
-        <p>Description: New General Mathematics for Secondary Schools</p>
+        <p class="font-serif my-2 mb-6">Description: New General Mathematics for Secondary Schools</p>
 
-        <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+        <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
   
       </div>
     </div>
@@ -85,33 +95,34 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Secondary</span>
+        <span class=" font-serif tag">Secondary</span>
 
-        <span class="tag">Science</span>
+        <span class=" font-serif tag">Science</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">New School Physics</div>
+        <div class=" font-serif name">New School Physics</div>
 
-        <p>Description:New School Physics for Secondary Schools New and Old Students</p>
+        <p class="font-serif my-2 mb-6">Description:New School Physics for Secondary Schools New and Old Students</p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
 
     </div>
     
   </div>
 
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class="cta-button-2">Apply for More Books</a></p>
+  <p class="mt-12"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class=" font-serif cta-button-2">Apply for More Books</a></p>
   
  
   </section>
 
+  <div class="border-b border-gray-100 mb-12"></div>
 
 
   <section class="book-categories">
     <!-- Category 1 -->
     <div class="category">
-      <h2>University Books</h2>
+      <h2 class="font-serif font-bold">University Books</h2>
 
   <!-- A div with container id to hold the card -->
   <div id="container">
@@ -124,16 +135,16 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">University</span>
+        <span class=" font-serif tag">University</span>
 
-        <span class="tag">Legal</span>
+        <span class=" font-serif tag">Legal</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">Nigerian Legal System</div>
+        <div class=" font-serif name">Nigerian Legal System</div>
 
-        <p>Description:Introduction to Nigerian Legal System </p>
+        <p class="font-serif my-2 mb-6">Description:Introduction to Nigerian Legal System </p>
 
-        <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+        <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
     </div>
 
@@ -145,31 +156,32 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">University</span>
+        <span class=" font-serif tag">University</span>
 
-        <span class="tag">Law</span>
+        <span class=" font-serif tag">Law</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">Nigerian Constitution Law</div>
+        <div class=" font-serif name">Nigerian Constitution Law</div>
 
-        <p>Description:Introduction to Nigerian Legal System </p>
+        <p class="font-serif my-2 mb-6" >Description:Introduction to Nigerian Legal System </p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
 
     </div>
   </div>
 
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link"  onclick="redirectToForm()" class="cta-button-2">Apply for More Books</a></p>
+  <p class="mt-12"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link"  onclick="redirectToForm()" class=" font-serif cta-button-2">Apply for More Books</a></p>
   
  
   </section>
 
+  <div class="border-b border-gray-100 mb-12"></div>
 
   <section class="book-categories">
     <!-- Category 1 -->
     <div class="category">
-      <h2>Children Books and More</h2>
+      <h2 class="font-serif font-bold ">Children Books and More</h2>
 
   <!-- A div with container id to hold the card -->
   <div id="container">
@@ -182,16 +194,16 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Education</span>
+        <span class=" font-serif tag">Education</span>
 
-        <span class="tag">Children</span>
+        <span class=" font-serif tag">Children</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">Modular History</div>
+        <div class=" font-serif name">Modular History</div>
 
-        <p>Description: Modular History for Primary School</p>
+        <p class="font-serif my-2 mb-6">Description: Modular History for Primary School</p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif mt-12 card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
     </div>
 
@@ -203,31 +215,32 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Novel</span>
+        <span class="tag font-serif ">Novel</span>
 
-        <span class="tag">Frictional</span>
+        <span class=" font-serif tag">Frictional</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">Purple Hibiscus</div>
+        <div class=" font-serif name">Purple Hibiscus</div>
 
-        <p>Description:Chimimanda Ngozi Adichie; Purple Hibiscus</p>
+        <p class="font-serif my-2 mb-6">Description:Chimimanda Ngozi Adichie; Purple Hibiscus</p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
 
     </div>
   </div>
 
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class="cta-button-2">Apply for More Books</a></p>
+  <p class="mt-12"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class=" font-serif cta-button-2">Apply for More Books</a></p>
   
  
   </section>
 
+  <div class="border-b border-gray-100 mb-12"></div>
 
   <section class="book-categories">
     <!-- Category 1 -->
     <div class="category">
-      <h2>Spiritual and Motivational Books</h2>
+      <h2 class="font-serif lg:ml-48 font-bold" >Spiritual and Motivational Books</h2>
 
   <!-- A div with container id to hold the card -->
   <div id="container">
@@ -240,16 +253,16 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Christian</span>
+        <span class=" font-serif tag">Motivation</span>
 
-        <span class="tag">Learn</span>
+        <span class=" font-serif tag">Learn</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">Healing The Soul Of A Woman</div>
+        <div class=" font-serif name">Healing The Soul Of A Woman</div>
 
-        <p>How To Overcome Your Emotional Wounds</p>
+        <p class="font-serif my-2 mb-6">How To Overcome Your Emotional Wounds</p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
     </div>
 
@@ -261,16 +274,16 @@
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Motivation</span>
+        <span class=" font-serif tag">Motivation</span>
 
-        <span class="tag">Learn</span>
+        <span class=" font-serif tag">Learn</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">10 Essays That Will Change The Way You Think</div>
+        <div class=" font-serif name">10 Essays That Will Change The Way You Think</div>
 
-        <p>10 Essays That Will Change The Way You Think</p>
+        <p class="font-serif my-2 mb-6">10 Essays That Will Change The Way You Think</p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif mb-12 card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
 
     </div>
@@ -281,66 +294,66 @@
   <div id="container">
 
     <!-- A div with card class for the card  -->
-    <div class="book-card">
+    <div class=" mt-6 book-card">
       <img src="images/IMAGE BOOK (15).jpg" alt="Lago di Braies">
 
       <!-- A div with card__details class to hold the details in the card  -->
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Motivation</span>
+        <span class=" font-serif tag">Motivation</span>
 
-        <span class="tag">Learn</span>
+        <span class=" font-serif tag">Learn</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">Milloniare Success Habits</div>
+        <div class=" font-serif name">Milloniare Success Habits</div>
 
-        <p>The Gateway To Wealth And Prosperity</p>
+        <p class="font-serif my-2 mb-6">The Gateway To Wealth And Prosperity</p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" class="card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
     </div>
 
     <!-- A div with card class for the card  -->
-    <div class="book-card">
+    <div class=" mt-6 book-card">
       <img src="images/IMAGE BOOK (14).jpg" alt="Lago di Braies">
 
       <!-- A div with card__details class to hold the details in the card  -->
       <div class="card__details">
 
         <!-- Span with tag class for the tag -->
-        <span class="tag">Motivation</span>
+        <span class="font-serif tag">Motivation</span>
 
-        <span class="tag">Learn</span>
+        <span class="font-serif tag">Learn</span>
 
         <!-- A div with name class for the name of the card -->
-        <div class="name">The Courage To Be Disliked</div>
+        <div class=" font-serif name">The Courage To Be Disliked</div>
 
-        <p>The Japanese Philosophy That Shows You How To Change Your Life </p>
+        <p class="font-serif my-2 mb-6">The Japanese Philosophy That Shows You How To Change Your Life </p>
 
-          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class="card-button" onclick="redirectToForm()">Get This Book</button>  
+          <button href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" class=" font-serif card-button" onclick="redirectToForm()">Get This Book</button>  
       </div>
 
     </div>
   </div>
 
 
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class="cta-button-2">Apply for More Books</a></p>
+  <p class="mt-12"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class=" font-serif cta-button-2">Apply for More Books</a></p>
   
  
   </section>
 
 
-
+  <div class="border-b border-gray-100 mb-12"></div>
 
 
 
 
 
   <section class="cta-section">
-    <h2>Ready to Dive into a World of Knowledge?</h2>
-    <p>Don't miss out on these free books. Get started today!</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class="cta-button">Browse All Books</a>
+    <h2 class="font-serif font-bold">Ready to Dive into a World of Knowledge?</h2>
+    <p class="font-serif">Don't miss out on these free books. Get started today!</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1ncr7nWV8v-365vWHRg0Tn8g7b2T-jiU0YX7oOoJ02951Tw/viewform?usp=sf_link" onclick="redirectToForm()" class=" font-serif cta-button">Browse All Books</a>
   </section>
 
 
@@ -348,37 +361,37 @@
   
 
 
-  
+
       <!-- Footer -->
       <footer class="site-footer">
         <!-- Desktop version -->
         <div class="footer-content">
             <div class="footer-column">
                 <img src="images/IMG_0605-removebg-preview.png" alt="Logo" width="100">
-                <h3>Greenesibooks</h3>
-                <p>Contact Information:</p>
-                <p>Email: Greenesibooks@gmail.com</p>
-                <p>Phone: (+234) 9031502701</p>
-                <p>WhatsApp:(+234) 9031502701</p>
+                <h3 class="font-serif">Greenesibooks</h3>
+                <p class="font-serif">Contact Information:</p>
+                <p class="font-serif">Email: Greenesibooks@gmail.com</p>
+                <p class="font-serif">Phone: (+234) 9031502701</p>
+                <p class="font-serif">WhatsApp:(+234) 9031502701</p>
             </div>
   
             <div class="footer-column">
-                <h3>Quick Links</h3>
+                <h3 class="font-serif">Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li><a href="indexlandingpage.html">Donate Books</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li class="font-serif"><a href="index.html">Home</a></li>
+                    <li class="font-serif"><a href="AboutUs.html">About Us</a></li>
+                    <li class="font-serif"><a href="indexlandingpage.html">Donate Books</a></li>
+                    <li class="font-serif"><a href="contactus.html">Contact Us</a></li>
                     <!-- Add more links here -->
                 </ul>
             </div>
             <div class="footer-column">
-              <h3>What We Do</h3>
+              <h3 class="font-serif">What We Do</h3>
               <ul>
-                  <li><a href="ourinitiatives.html">Library Building Projects</a></li>
-                  <li><a href="ourinitiatives.html">Education Initiatives</a></li>
-                  <li><a href="ourinitiatives.html">Mobile Libraries</a></li>
-                  <li><a href="ourinitiatives.html">Book Recycling Programs</a></li>
+                  <li class="font-serif"><a href="ourinitiatives.html">Library Building Projects</a></li>
+                  <li class="font-serif"><a href="ourinitiatives.html">Education Initiatives</a></li>
+                  <li class="font-serif"><a href="ourinitiatives.html">Mobile Libraries</a></li>
+                  <li class="font-serif"><a href="ourinitiatives.html">Book Recycling Programs</a></li>
                   <!-- Add more links here -->
               </ul>
           </div>
@@ -386,17 +399,17 @@
             <!-- Existing content -->
             <!-- ... -->
             <div class="receive-books-2">
-              <h4>Receive Books</h4>
+              <h4 class="font-serif">Receive Books</h4>
               <div class="arrow-icon">
                 <i class="fas fa-arrow-circle-down"></i>
               </div>
-              <a href="book.html" onclick="redirectToForm()" class="button11">Receive a Book</a>
+              <a href="book.html" onclick="redirectToForm()" class=" font-serif button11">Receive a Book</a>
             </div>
             <!-- ... -->
           </div>
       </div>
       <div class="footer-line"></div>
-      <p>&copy; 2023 Greenesibooks</p>
+      <p class="font-serif">&copy; 2023 Greenesibooks</p>
   </footer>
   
         
