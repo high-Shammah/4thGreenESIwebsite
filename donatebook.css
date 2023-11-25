@@ -446,7 +446,7 @@ nav {
 /* 5 */
 @media screen and (max-width: 800px){
 	.myslide{
-		height: 660px;
+		height: 675px;
     overflow: hidden;
 	}
 	.txt{
