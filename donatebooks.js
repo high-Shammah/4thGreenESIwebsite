@@ -47,13 +47,12 @@ function myFunction() {
 }
 
 
-
-
-// for button
 function redirectToForm() {
-  // You can customize this URL or add more logic if needed
+  console.log("Redirecting to form..."); // Add this line
   window.location.href = "book.html";
 }
+
+
 
 
 //Another update for websitr, in October again= first section 
@@ -255,31 +254,6 @@ function isInViewport(element) {
   
  
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const donationTypeSelect = document.getElementById("donationType");
-    const moneyFields = document.getElementById("moneyFields");
-    const booksFields = document.getElementById("booksFields");
-
-    // Function to show or hide the additional fields based on the selected donation type
-    function handleDonationTypeChange() {
-      const selectedType = donationTypeSelect.value;
-      console.log("Selected donation type: " + selectedType); // Add this line
-
-      if (selectedType === "money") {
-        moneyFields.style.display = "block";
-        booksFields.style.display = "none";
-      } else if (selectedType === "books") {
-        moneyFields.style.display = "none";
-        booksFields.style.display = "block";
-      } else {
-        moneyFields.style.display = "none";
-        booksFields.style.display = "none";
-      }
-    }
-
-    // Listen for changes in the donation type select field
-    donationTypeSelect.addEventListener("change", handleDonationTypeChange);
-  });
 
 
 
