@@ -199,7 +199,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
-  z-index: 1;
+  z-index: 4;
 }
 
 
@@ -217,7 +217,7 @@ nav {
     border: 1px solid #4CAF50;
   cursor: pointer;
   margin-top: 20px;
-  z-index: 1;
+  z-index: 4;
 }
 
 /* Adjust placement of images and text */
@@ -297,7 +297,7 @@ nav {
 	width: 100%;
 	background: #2c3e50; /* darckblue */
   overflow: hidden;
-  z-index: 4;
+  z-index: 1;
 }
  
 .myslide{
@@ -315,7 +315,17 @@ nav {
   height: 100%;
   background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
   pointer-events: none; /* Allow interactions with elements underneath */
-  z-index: 2;
+  z-index: 999;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
+  pointer-events: none; /* Allow interactions with elements underneath */
 }
 
 .prev, .next{
@@ -359,13 +369,6 @@ nav {
 }
 /* /javascript */
 
-/* muslide add fade */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
 @-webkit-keyframes fade {
   from {opacity: 0.8}
@@ -393,21 +396,12 @@ nav {
     z-index: 2;
 }
 
-@-webkit-keyframes posi {
-  from {left: 25%;}
-  to {left: 15%;}
-}
 
-
-@keyframes posi {
-  from {left: 25%;}
-  to {left: 15%;}
-}
 
 .txt h1{
 	color: #fff;
   font-weight: bolder;
-	font-size: 50px;
+	font-size: 65px;
 	margin-bottom: 20px;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -415,7 +409,8 @@ nav {
 }
 .txt p{
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 30px;
+  padding-bottom: 20px;
 }
 /* /3 */
 
@@ -451,14 +446,14 @@ nav {
 /* 5 */
 @media screen and (max-width: 800px){
 	.myslide{
-		height: 590px;
+		height: 640px;
     overflow: hidden;
 	}
 	.txt{
 		letter-spacing: 2px;
 		line-height: 35px;
-		top: 60%;
-		left: 50%;
+		top: 50%;
+		left: 43%;
 		transform: translate(-50%, -50%);
 		-webkit-animation-name: posi2;
 		-webkit-animation-duration: 2s;
@@ -466,23 +461,14 @@ nav {
 		animation-duration: 2s;
 	}
 
-	@-webkit-keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-
-	@keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
 
 	.txt h1{
-		font-size: 40px;
+		font-size: 50px;
     line-height: 7vh;
 	}
 	.txt p{
-		font-size: 13px;
+		font-size: 17px;
+    padding-bottom: 20px;
 	}
 
   .prev, .next{
@@ -498,10 +484,6 @@ nav {
     display: none;
   }
 
-  .button1 {
-     margin-top: 90px;
-     z-index: 1;
-  }
 
 }
 /* /5 */
@@ -509,9 +491,10 @@ nav {
 /* 6 */
 @media screen and (max-width: 520px){
 	.txt h1{
-		font-size: 30px;
-		margin-bottom: 20px;
+		font-size: 40px;
+		margin-bottom: 16px;
     font-weight: bolder;
+    line-height: 10vh;
 	}
 	.sign{
 		margin-right: 20px;
@@ -521,120 +504,6 @@ nav {
 	}
 }
 /* /6 */
-
-
-
-/* Another update for websitr, in October again= SECOND section */
-
-.content-section {
-  display: flex;
-  margin: 20px;
-  padding: 100px;
-  overflow: hidden;
-  margin-top: -20px;
-  margin-left: -30px;
-  width: 100%;
-  height: 300px;
-  background-image: url(images/Simple\ Storytelling.gif);
-  
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
-  pointer-events: none; /* Allow interactions with elements underneath */
-}
-
-.image-container-2 {
-  position: relative;
-}
-
-.image-container-2 img {
-  width: 470px; /* Adjust the image dimensions as needed */
-  height: 350px;
-  margin-top: -20px;
-  border-radius: 3px;
-}
-
-
-.text-container {
-  margin-left: 500px;
-  color: #fff;
-  margin-top: -350px;
-  padding: 50px;
-  width: 50%;
-  bottom: 0;
-}
-
-.text-container h2 {
-  font-size: 36px;
-}
-
-.text-container .icon-2 {
-  font-size: 40px;
-  margin-right: 303px;
-  justify-content: space-between;
-  color: #007bff;
-}
-
-.text-container .body-text-2 {
-  font-size: 16px;
-  top: 20px;
-  width: 50%;
-  
-}
-
-.text-container .additional-text {
-  font-size: 14px;
-}
-
-/* Media query for mobile responsiveness */
-@media screen and (max-width: 768px) {
-  .content-section {
-      flex-direction: column;
-      height: 490px; /* Adjust the height as needed */
-      padding: 20px; /* Adjust the padding for mobile */
-      overflow: hidden;
-  }
-
-  .image-container-2 img {
-      display: none; /* Hide the image for mobile */
-  }
-
-  .text-container .icon-2 {
-    margin-top: 60px;
-    margin-bottom: 40px;
-    margin-left: 50px;
-  }
-
-  .text-container {
-      margin-left: 0;
-      margin-top: 0;
-      padding: 20px;
-      width: 100%;
-  }
-
-  .text-container h2 {
-    font-size: 30px;
-    margin-left: 95px;
-  }
-
- .body-text-2 p {
-    width: 280px;
-    margin-left: 20px;
-  }
-
-  .additional-text {
-    margin-left: 20px;
-  }
-  
-}
-
-
 
 
 
@@ -974,7 +843,7 @@ a.no-underline {
   margin-left: 500px;
   margin-top: -300px;
   width: 800px;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -1049,7 +918,7 @@ a.no-underline {
 @media screen and (max-width: 768px) {
   .books-we-accept-section-2 {
       display: block;
-      height: 880px;
+      height: 980px;
       padding: 10px; /* Adjust padding as needed */
       margin-top: -50px;
   }
@@ -1078,7 +947,7 @@ a.no-underline {
   .swiper-2 {
       margin: 0;
       width: 810px;
-      height: 490px;
+      height: 450px;
   }
 
   .swiper-slide {
@@ -1094,13 +963,13 @@ a.no-underline {
   }
 
   .swiper-slide h4 {
-      margin-top: 20px;
+     
       font-size: 18px;
   }
 
   .swiper-slide p {
-      padding: 10px;
-      line-height: 5vh;
+      
+      line-height: 6vh;
   }
 
   .icon-3 i {
@@ -1108,8 +977,11 @@ a.no-underline {
   }
 
   .icon-4 i {
-    padding-bottom: 50px;
-    margin-left: 60px;
+    display: hidden;
+  }
+
+  .icon-4 {
+    display: hidden;
   }
 }
 
@@ -1125,25 +997,6 @@ a.no-underline {
 
 }
 
-
-
-
-
-
- /* For new landing page... sliding left and right */
-
-
-
-
-
-
-  
-  
-  
-  
-
-
-  
   
   
   
@@ -1268,11 +1121,7 @@ a.no-underline {
     line-height: 5vh;
   }
 
-  
-
 }
-  
-  
   
   
 
