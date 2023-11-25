@@ -202,7 +202,7 @@
 
       
           <!-- Additional fields for donating books -->
-          <div id="booksFields" style="display: none;">
+          <div id="booksFields2" style="display: none;">
             <label for="contactNumber">Contact Number:</label>
             <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your contact number">
       
@@ -216,7 +216,7 @@
             <input type="text" id="bookCondition" name="bookCondition" placeholder="Enter book condition">
       
            
-          <div id="booksFields" style="display: none;">
+          <div id="booksFields2" style="display: none;">
             <label for="numberOfBooks">Number of Books:</label>
             <input type="number" id="numberOfBooks" name="numberOfBooks" placeholder="Enter the number of books">
             
@@ -305,5 +305,34 @@
     <!-- Your page content goes here -->
 
     <script src="donatebooks.js"></script>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const donationTypeSelect = document.getElementById("donationType");
+    const moneyFields = document.getElementById("moneyFields");
+    const booksFields2 = document.getElementById("booksFields2");
+
+    // Function to show or hide the additional fields based on the selected donation type
+    function handleDonationTypeChange() {
+        const selectedType = donationTypeSelect.value;
+
+        if (selectedType === "money") {
+            moneyFields.style.display = "block";
+            booksFields2.style.display = "none";
+        } else if (selectedType === "books") {
+            moneyFields.style.display = "none";
+            booksFields2.style.display = "block";
+        } else {
+            moneyFields.style.display = "none";
+            booksFields2.style.display = "none";
+        }
+    }
+
+    // Listen for changes in the donation type select field
+    donationTypeSelect.addEventListener("change", handleDonationTypeChange);
+});
+
+    </script>
 </body>
 </html>
