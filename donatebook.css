@@ -916,7 +916,7 @@ a.no-underline {
 @media screen and (max-width: 768px) {
   .books-we-accept-section-2 {
       display: block;
-      height: 980px;
+      height: 1100px;
       padding: 10px; /* Adjust padding as needed */
       margin-top: -50px;
   }
@@ -930,7 +930,7 @@ a.no-underline {
   .text-container-2 h2 {
     padding: -10px;
     font-size: 30px;
-    margin-left: 80px;
+    margin-left: 45px;
   }
 
   .body-text {
