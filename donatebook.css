@@ -154,17 +154,17 @@ nav {
 
 
 
-
+/*
 
 .image-text-session {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center; /* Align items vertically in the center 
   padding: 20px;
   background-color: #fff;
   padding: 70px 80px; 
   margin-bottom: 30px;
-  flex-direction: row-reverse; /* Change the flex direction */
+  flex-direction: row-reverse; /* Change the flex direction 
 }
 
 
@@ -220,7 +220,7 @@ nav {
   z-index: 4;
 }
 
-/* Adjust placement of images and text */
+/* Adjust placement of images and text 
 .image-text-session {
   display: flex;
   justify-content: space-between;
@@ -229,20 +229,20 @@ nav {
 .text-content {
   flex: 1;
   padding: 20px;
-  order: 2; /* Change the order to make text come before image */
+  order: 2; /* Change the order to make text come before image 
 }
 
 .image-container {
   flex: 1;
-  text-align: left; /* Align the image to the left */
-  order: 1; /* Change the order to make image come after text */
+  text-align: left; /* Align the image to the left 
+  order: 1; /* Change the order to make image come after text 
 }
 
 /* Add any other styles you need for the image and text here */
 
 
 
-/* Mobile responsiveness for smaller screens */
+/* Mobile responsiveness for smaller screens 
 @media (max-width: 768px) {
   .image-text-session {
       flex-direction: column;
@@ -264,7 +264,8 @@ nav {
       margin-top: -30px;
       margin-bottom: 70px;
   }
-
+  */
+/*
   .image-container {
       margin-top: 5px;
       order: 3;
@@ -292,41 +293,53 @@ nav {
 
 
 /* 4th trier again for swiping again */
+
+/*
 .slider{
 	position: relative;
 	width: 100%;
-	background: #2c3e50; /* darckblue */
+	background: #2c3e50; /* darckblue 
   overflow: hidden;
   z-index: 1;
 }
+*/ 
  
+.slider {
+  background-image: url(images/6a5c6de43e75d82601675717f54ea39f.jpg);
+  background-size: cover; /* Ensure the background image covers the entire container */
+  height: 650px;
+}
+
 .myslide{
-	height: 655px;
-	display: none;
+	height: 600px;
 	overflow: hidden;
 }
 
 
+/*
 .overlay-2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
-  pointer-events: none; /* Allow interactions with elements underneath */
+  background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) 
+  pointer-events: none; /* Allow interactions with elements underneath 
   z-index: 999;
 }
+*/
 
+/*
 .overlay-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) */
-  pointer-events: none; /* Allow interactions with elements underneath */
+  background-color: rgba(12, 12, 12, 0.5); /* Adjust the opacity as needed (0.5 = 50% opacity) 
+  pointer-events: none; /* Allow interactions with elements underneath 
 }
+*/
 
 .prev, .next{
 	position: absolute;
@@ -348,7 +361,7 @@ nav {
 .dotsbox{
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%);
+margin-top: -1000px;
 	bottom: 20px;
 	cursor: pointer;
 }
@@ -367,7 +380,7 @@ nav {
 .active, .dot:hover{
 	border-color: #144e2d; /* blue */
 }
-/* /javascript */
+/* /javascript 
 
 
 @-webkit-keyframes fade {
@@ -385,15 +398,15 @@ nav {
 .txt{
 	position: absolute;
 	color: #fff;
+  height: 380px;
+  width: 500px;
+  padding-left: 30px;
+  margin-top: -20px;
 	letter-spacing: 2px;
 	line-height: 35px;
 	top: 30%;
-	left: 15%;
-	-webkit-animation-name: posi;
-  	-webkit-animation-duration: 2s;
-  	animation-name: posi;
-  	animation-duration: 2s;
-    z-index: 2;
+	left: 55%;
+
 }
 
 
@@ -401,20 +414,22 @@ nav {
 .txt h1{
 	color: #fff;
   font-weight: bolder;
-	font-size: 65px;
-	margin-bottom: 20px;
+	font-size: 35px;
+  margin-top: 20px;
+	margin-bottom: 10px;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 10vb;
+  line-height: 7vb;
 }
 .txt p{
-	font-weight: bold;
-	font-size: 30px;
+  font-weight: 300;
+	font-size: 20px;
   padding-bottom: 20px;
 }
 /* /3 */
 
 /* 4 */
+/*
 .myslide img{
 	transform: scale(1.5, 1.5);
 	-webkit-animation-name: zoomin;
@@ -438,22 +453,29 @@ nav {
 @keyframes zoomin {
   from {transform: scale(1, 1);}
   to {transform: scale(1.5, 1.5);}
-}
+} 
 /* /4 */
 
 
 
 /* 5 */
 @media screen and (max-width: 800px){
+
+  .slider{
+    height: 490px;
+    margin-bottom: 150px;
+  }
 	.myslide{
-		height: 685px;
+		height: 455px;
     overflow: hidden;
 	}
 	.txt{
 		letter-spacing: 2px;
 		line-height: 35px;
-		top: 50%;
-		left: 43%;
+    height: 330px;
+    width: 400px;
+		top: 75%;
+		left: 48%;
 		transform: translate(-50%, -50%);
 		-webkit-animation-name: posi2;
 		-webkit-animation-duration: 2s;
@@ -461,6 +483,9 @@ nav {
 		animation-duration: 2s;
 	}
 
+  .txt h1 {
+    font-size: 28px;
+  }
 
 	.txt p{
 		font-size: 14px;
@@ -484,10 +509,12 @@ nav {
 }
 /* /5 */
 
+
+
 /* 6 */
 @media screen and (max-width: 520px){
 	.txt h1{
-		font-size: 30px;
+		font-size: 20px;
     margin-top: 75px;
 		margin-bottom: 16px;
     font-weight: bolder;
@@ -984,6 +1011,52 @@ a.no-underline {
 }
 
 
+/* styles.css */
+
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px;
+}
+
+.scroll-container img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.scroll-text {
+  align-items: center;
+  padding: 20px;
+}
+
+.card-1 {
+  flex-shrink: 0;
+  width: 350px;
+  min-width: 300px;
+  border: 1px solid #e5e7eb;
+  margin: 30px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-1:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3490dc;
+  color: #ffffff;
+  border: 1px solid #3490dc;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
 
 
 
@@ -1030,7 +1103,6 @@ a.no-underline {
 .section-content {
   align-items: center;
   justify-content: center;
-  margin-left: 240px;
   background-color: #fbefef;
   color: #000;
   line-height: 3.5vh;
@@ -1968,8 +2040,8 @@ button[type="submit"] {
 
   .book-card {
     margin-left: 0;
-    width: 80%;
-    margin-bottom: 20px;
+    width: 95%;
+    margin-bottom: 35px;
   }
 
     /* Media query for screens smaller than 768px */
