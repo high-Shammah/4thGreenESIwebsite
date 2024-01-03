@@ -29,22 +29,22 @@ const observer = new IntersectionObserver(animateOnScroll, options);
 divsToAnimate.forEach(div => observer.observe(div));
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+//window.onscroll = function() {myFunction()};
 
 // Get the header
-var header = document.getElementById("myHeader");
+//var header = document.getElementById("myHeader");
 
 // Get the offset position of the navbar
-var sticky = header.offsetTop;
+//var sticky = header.offsetTop;
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.add("sticky");
-  }
-}
+//function myFunction() {
+  //if (window.pageYOffset > sticky) {
+    //header.classList.add("sticky");
+  //} else {
+    //header.classList.add("sticky");
+  //}
+//}
 
 
 function redirectToForm() {
@@ -52,6 +52,20 @@ function redirectToForm() {
   window.location.href = "book.html";
 }
 
+
+// scripts.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cardContainer = document.querySelector('.scroll-container');
+
+  cardContainer.addEventListener('scroll', function () {
+    const centerCard = document.querySelector('.card:hover');
+    if (centerCard) {
+      const scrollX = centerCard.getBoundingClientRect().left - cardContainer.getBoundingClientRect().left;
+      cardContainer.scrollLeft = scrollX;
+    }
+  });
+});
 
 
 
