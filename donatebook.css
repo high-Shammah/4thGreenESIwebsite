@@ -112,7 +112,7 @@ nav {
 
     header {
       width: 550px;
-      padding: 25px auto;
+      padding: 20px 30px;
     }
     
     .nav-links {
@@ -462,8 +462,8 @@ margin-top: -1000px;
 @media screen and (max-width: 800px){
 
   .slider{
-    height: 490px;
-    margin-bottom: 150px;
+    height: 590px;
+    margin-bottom: 250px;
   }
 	.myslide{
 		height: 455px;
@@ -472,9 +472,10 @@ margin-top: -1000px;
 	.txt{
 		letter-spacing: 2px;
 		line-height: 35px;
-    height: 330px;
-    width: 400px;
-		top: 75%;
+    height: 430px;
+   
+    width: 300px;
+		top: 95%;
 		left: 48%;
 		transform: translate(-50%, -50%);
 		-webkit-animation-name: posi2;
@@ -806,6 +807,10 @@ margin-top: -1000px;
     width: 90%;
     margin-bottom: 20px;
     height: auto;
+  }
+
+  .card-1 {
+    width: 20px;
   }
 }
 
@@ -1849,7 +1854,13 @@ button[type="submit"] {
   text-align: center;
   justify-content: space-between ;
   margin-bottom: 20px;
-  margin-left: 120px;
+
+}
+
+.book-card {
+  align-items: center;
+  margin-left: 0%;
+  margin-right: 20px;
 }
 
 .book img {
@@ -2027,6 +2038,7 @@ button[type="submit"] {
 
   .book-categories {
     margin: 40px;
+    margin-left: 50px;
     justify-content: space-between;
     align-items: center;
   
@@ -2036,7 +2048,11 @@ button[type="submit"] {
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    margin-left: 0px;
+    padding-left: 100px;
   }
+
+
 
   .book-card {
     margin-left: 0;
