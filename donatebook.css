@@ -150,6 +150,12 @@ nav {
 }
 
 
+@media screen and (max-width: 520px){
+  header {
+    width: 400px;
+    padding: auto auto;
+  }
+}
 
 
 
@@ -486,6 +492,7 @@ margin-top: -1000px;
 
   .txt h1 {
     font-size: 28px;
+    margin-top: -20px;
   }
 
 	.txt p{
