@@ -152,7 +152,7 @@ nav {
 
 @media screen and (max-width: 520px){
   header {
-    width: 280px;
+    width: 340px;
     padding: auto auto;
   }
 }
@@ -461,7 +461,7 @@ margin-top: -1000px;
   to {transform: scale(1.5, 1.5);}
 } 
 /* /4 */
-
+/* @media screen and (max-width:756px) {
 
 
 /* 5 */
@@ -523,7 +523,7 @@ margin-top: -1000px;
 @media screen and (max-width: 520px){
 	.txt h1{
 		font-size: 20px;
-    margin-top: -28px;
+    margin-top: -8px;
 		margin-bottom: 16px;
     font-weight: bolder;
     line-height: 8vh;
