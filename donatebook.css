@@ -139,8 +139,6 @@ nav {
     .logo-text {
       font-size: 24px;
     }
-
-   
     .nav-links.show {
         display: flex;
     }
@@ -152,7 +150,7 @@ nav {
 
 @media screen and (max-width: 520px){
   header {
-    width: 340px;
+    width: 395px;
     padding: auto auto;
   }
 }
@@ -523,7 +521,7 @@ margin-top: -1000px;
 @media screen and (max-width: 520px){
 	.txt h1{
 		font-size: 20px;
-    margin-top: -8px;
+    margin-top: 18px;
 		margin-bottom: 16px;
     font-weight: bolder;
     line-height: 8vh;
@@ -1686,6 +1684,7 @@ button[type="submit"] {
   }
 
   .number-circle {
+    width: 100%;
       display: none;
   }
 
@@ -1714,7 +1713,7 @@ button[type="submit"] {
 
   .numbered-div.div5{
       margin-top: 40px;
-      margin-left: -40px;
+      margin-left: -10px;
       margin-right: 0;
       width: 300px;
   }
@@ -2036,7 +2035,7 @@ button[type="submit"] {
 
   .book-card {
     margin-left: 0;
-    width: 95%;
+    width: 135%;
     margin-bottom: 35px;
   }
 
@@ -2107,7 +2106,7 @@ button[type="submit"] {
   }
 
   .cta-button-2 {
-    margin-left: 80px;
+    margin-left: 50px;
 
   }
 
