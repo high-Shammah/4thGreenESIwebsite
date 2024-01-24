@@ -127,15 +127,37 @@
  <!-- Another new section 2 -->
 
 
- <section class="flex flex-col items-center justify-center p-12 sm:px-6 lg:mt-24 mt-24 h-auto">
+ <section class="flex flex-col items-center justify-center p-12 sm:px-6 lg:mt-24 mt-24 h-auto fade-in">
   <h2 class="font-serif text-4xl font-bold mb-12 md:px-96 md:ml-24 sm:ml-24 sm:px-64">Our Story</h2>
-  <div class="border-b border-dashed lg:ml-96 lg:px-96 border-gray-500 mb-12 w-1/4 mx-auto"></div>
-  <p class="font-serif text-xl px-2 lg:px-64 text-center mx-auto">Our transformation began with a deep passion for books and a desire to make a lasting impact on society. Over the years, we witnessed the transformative power of literature and the incredible opportunities it offers for personal growth, education, and empowerment.</p>
-  <div class="border-b border-dashed lg:ml-96 mt-12 lg:px-96 border-gray-500 mb-12 w-1/4 mx-auto"></div>
-  <div class="py-2 px-4 lg:px-96 ml-0 lg:ml-32">
-    <a href="AboutUs.html" class="text-xl border border-green-500 px-4 py-2 mt-12 text-green-500 rounded-md transition-all duration-300 hover:bg-green-500 hover:text-white">Read About us</a>
+
+  <div class="flex flex-col justify-between lg:flex-row items-center">
+
+    <div class="lg:px-2  justify-center">
+      <p class="font-serif text-xl px-12 mb-10 lg:mb-24 text-center mx-auto">
+        Our transformation began with a deep passion for books and a desire to make a lasting impact on society. Over the years, we witnessed the transformative power of literature and the incredible opportunities it offers for personal growth, education, and empowerment.
+      </p>
+
+      <div class="py-2 px-4 justify-center lg:px-96 ml-0 ">
+        <a href="AboutUs.html" class="text-xl border border-green-500 px-4 py-2 mt-12 text-green-500 rounded-md transition-all duration-300 hover:bg-green-500 hover:text-white">Read About us</a>
+      </div>
+    </div>
+
+    <div class="h-3/5 w-[calc(100% + 200px)] mt-8 lg:mt-0 relative" >
+      <div class="bg-gray-200 p-4 justify-between rounded-lg flex flex-wrap" >
+        <!-- Replace the image sources with your actual images -->
+        <img src="images/15470296426_d0aaf1cb10.jpg" alt="" class="w-2/3 h-full object-cover rounded-lg">
+        <img src="images/a2e207253de228933b19e8f9684fc5f4.jpg" alt="" class="w-1/3 h-1/3 object-cover rounded-lg">
+        <img src="images/992b5a52c79a9f715088d0a82648d009.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+
   </div>
 </section>
+
+
+
+
 
 
  <div class="border-b border-gray-100 mb-12"></div>
@@ -237,7 +259,7 @@
 
         <!-- Repeat this card structure for each card -->
         <div class="card-1 bg-white overflow-hidden rounded-lg shadow-md sm:m-4 md:m-12 flex-shrink-0">
-          <img src="images/06f65193b188fd0fc5dc55763669e725 (1).jpg" alt="Card Image" class="w-full h-48 object-cover object-center">
+          <img src="images/9ffd559eaa615970bec7d20a1be5dde9.jpg" alt="Card Image" class="w-full h-48 object-cover object-center">
           <div class="scroll-text p-6">
             <h2 class="text-xl font-bold mb-2">Library Building Projects</h2>
             <p class="text-gray-600">Constructing and equipping libraries in underserved communities, schools, and public spaces, ensuring access to diverse 
@@ -249,7 +271,7 @@
         
     
         <div class="card-1 bg-white overflow-hidden rounded-lg shadow-md sm:m-4 md:m-12 flex-shrink-0">
-          <img src="images/0bd6d6f0304c7f97ae00ebdd30e7a087.jpg" alt="Card Image" class="w-full h-48 object-cover object-center">
+          <img src="images/5538eaf8e71e2835c6af6470aa12f8ad.jpg" alt="Card Image" class="w-full h-48 object-cover object-center">
           <div class=" scroll-text p-6">
             <h2 class="text-xl font-bold mb-2">Education Initiatives</h2>
             <p class="text-gray-600">Collaborating with schools and educators to develop engaging literacy programs, workshops, and resources that foster a 
@@ -259,7 +281,7 @@
         </div>
     
         <div class="card-1 bg-white overflow-hidden rounded-lg shadow-md sm:m-4 md:m-12 flex-shrink-0">
-          <img src="images/BOOK SHELFS (2).jpg" alt="Card Image" class="w-full h-48 object-cover object-center">
+          <img src="images/d7e8ab918788be2a82dbe5010997a673.jpg" alt="Card Image" class="w-full h-48 object-cover object-center">
           <div class="scroll-text p-6">
             <h2 class="text-xl font-bold mb-2">Mobile Libraries</h2>
             <p class="text-gray-600">Deploying mobile libraries to reach remote and marginalized areas, taking the magic of books directly to the doorstep of 
@@ -381,47 +403,87 @@
       
       
       
-      <section class="our-vision flex flex-col items-center justify-center mt-12">
-        <div class="section-header">
-          <h2 class="font-serif">Our Vision</h2>
-          <i class="fas fa-binoculars" style="border-radius: 50%; border: 2px solid #ecb2b2; padding: 20px;"></i>
+      <section class="our-vision flex flex-col items-center mt-12">
+        <div class="section-header justify-center">
+          <h2 class="font-serif text-4xl font-bold mb-12 md:px-96 md:ml-24 sm:ml-24 sm:px-64">Our Vision</h2>
         </div>
-        <div class=" font-serif flex flex-col items-center text-center justify-center text-xl px-12 lg:px-64 section-content">
-            Our vision is to foster a society where books are accessible to all, irrespective of economic, social, 
-            or geographic barriers. <br> We aspire to cultivate a nation of lifelong learners, critical thinkers, and 
-            compassionate individuals, driven by knowledge and creativity.
-          <!-- Your vision content here -->
+      
+        <div class="flex flex-col lg:flex-row justify-between justify-items-end w-full">
+          <div class="lg:px-2 ">
+            <div class="font-serif flex flex-col items-center text-center justify-center text-xl px-12 section-content">
+              <i class="fas fa-binoculars mb-16" style="border-radius: 50%; border: 2px solid #ecb2b2; padding: 20px;"></i>
+              Our vision is to foster a society where books are accessible to all, irrespective of economic, social, or geographic barriers. <br> We aspire to cultivate a nation of lifelong learners, critical thinkers, and compassionate individuals, driven by knowledge and creativity.
+              <!-- Your vision content here -->
+            </div>
+          </div>
+      
+          <div class="h-3/5 w-full mt-8 lg:mt-0 justify-end relative fade-in" >
+            <div class="bg-gray-200 p-4 rounded-lg mx-auto h-60 w-4/5 lg:h-[300px] lg:w-[700px]" >
+              <!-- Replace the image source with your actual image -->
+              <img src="images/06f65193b188fd0fc5dc55763669e725 (1).jpg" alt="" class="w-full h-full object-cover rounded-lg">
+            </div>
+          </div>
         </div>
       </section>
+      
+      
       
       <!-- Repeat the above structure for other sections -->
       
       <section class="our-mission flex flex-col items-center justify-center" style="height: 580px;">
         <div class="section-header">
-          <h2 class="font-serif">Our Mission</h2>
-          <i class="fas fa-hands-helping" style="border-radius: 50%; border: 2px solid #ecb2b2; padding: 20px;"></i>
+          <h2 class="font-serif text-4xl font-bold mb-12 md:px-96 md:ml-24 sm:ml-24 sm:px-64">Our Mission</h2>
         </div>
-        <div class="font-serif flex flex-col items-center justify-center text-center text-xl px-12 lg:px-64 section-content">
-            As an NGO, our primary mission is to promote literacy and a love for reading among all age groups, 
-            starting from the very foundation - our homes. <br> We firmly believe that a home library can be a catalyst 
-            for positive change, leading to a more informed and empowered society.
-          <!-- Your help content here -->
+      
+        <div class="flex flex-col justify-between lg:flex-row items-center">
+
+          <div class="h-3/5 w-full mt-8 lg:mt-0 justify-end relative fade-in" >
+            <div class="bg-gray-200 p-4 rounded-lg mx-auto h-60 w-4/5 lg:h-[300px] lg:w-[700px]" >
+              <!-- Replace the image source with your actual image -->
+              <img src="images/photo-serious-concentrated-dark-skinned-young-man-focused-textbook-wears-round-spectacles-green-sweater-studies-college_273609-24656.webp" alt="" class="w-full h-full object-cover rounded-lg">
+            </div>
+          </div>
+
+
+          <div class="lg:px-2">
+            <div class="font-serif flex flex-col items-center justify-center text-center text-xl px-12 section-content">
+              <i class="fas fa-hands-helping mb-16" style="border-radius: 50%; border: 2px solid #ecb2b2; padding: 20px;"></i>
+              As an NGO, our primary mission is to promote literacy and a love for reading among all age groups, starting from the very foundation - our homes. <br> We firmly believe that a home library can be a catalyst for positive change, leading to a more informed and empowered society.
+              <!-- Your help content here -->
+            </div>
+          </div>
+      
+          
         </div>
       </section>
+      
+      
     
 
 
 
-      <section class="receive-books flex flex-col items-center justify-center">
-        <div class="receive-content lg:px-64">
-          <h2 class=" font-serif font-bold section-header" style="margin-top: 5rem";>Receive Books</h2>
-          <p class=" font-serif p-6 text-xl section-description">Expand your reading horizons and embark on new adventures through the pages of our diverse collection of books. Whether you're an avid reader or just starting, we have something for everyone.</p>
-      
-          <div class="cta-button">
-            <a href="book.html" class=" font-serif button">Request Books</a>
-          </div>
+     <section class="receive-books flex flex-col items-center justify-center fade-in-out">
+  <div class="flex flex-col justify-between lg:flex-row items-center lg:px-2">
+    <div class="lg:px-2">
+      <div class="font-serif flex flex-col items-center justify-center text-center text-xl px-12 lg:px-64 section-content">
+        <h2 class="font-bold section-header" style="margin-top: 5rem;">Receive Books</h2>
+        <p class="p-6">Expand your reading horizons and embark on new adventures through the pages of our diverse collection of books. Whether you're an avid reader or just starting, we have something for everyone.</p>
+
+        <div class="cta-button">
+          <a href="book.html" class="button">Request Books</a>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div class="h-4/5 w-4/5 mt-8 lg:mt-0 relative fade-in">
+      <div class="bg-gray-200 p-4 rounded-lg">
+        <!-- Replace the image source with your actual image -->
+        <img src="images/0559e73dc7e6a1a00e70c2bb58d12b43.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -493,6 +555,7 @@
     <!-- Swiper JS -->
 
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
