@@ -17,7 +17,7 @@ header {
     color: #000;
     padding: 30px 0;
     z-index: 99999;
-  width: 1430px;
+  width: 1560px;
   position: absolute;
     
 }
@@ -111,7 +111,7 @@ nav {
     }
 
     header {
-      width: 550px;
+      width: 760px;
       padding: 20px 30px;
     }
     
@@ -150,9 +150,19 @@ nav {
 
 @media screen and (max-width: 520px){
   header {
-    width: 395px;
+    width: 490px;
     padding: auto auto;
   }
+}
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 3;
 }
 
 
@@ -309,7 +319,7 @@ nav {
 */ 
  
 .slider {
-  background-image: url(images/6a5c6de43e75d82601675717f54ea39f.jpg);
+  background-image: url(images/young-teenage-girl-lying-her-bed-studying-light-bedroom-home_1157-51939.webp);
   background-size: cover; /* Ensure the background image covers the entire container */
   height: 650px;
 }
