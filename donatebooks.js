@@ -47,6 +47,41 @@ divsToAnimate.forEach(div => observer.observe(div));
 //}
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  var elements = document.querySelectorAll('.fade-in');
+
+  function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+          (rect.top <= 0 && rect.bottom >= 0) ||
+          (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+          (rect.top >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+      );
+  }
+
+  function handleScroll() {
+      elements.forEach(function (element) {
+          if (isElementInViewport(element)) {
+              element.classList.add('show');
+          } else {
+              element.classList.remove('show');
+          }
+      });
+  }
+
+  // Initial check on page load
+  handleScroll();
+
+  // Listen for scroll events
+  window.addEventListener('scroll', handleScroll);
+});
+
+
+
+
+
 function redirectToForm() {
   console.log("Redirecting to form..."); // Add this line
   window.location.href = "book.html";
