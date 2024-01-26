@@ -147,10 +147,17 @@ nav {
     }
 }
 
+@media screen and (max-width: 600px){
+  header {
+    width: 490px;
+    padding: auto auto;
+  }
+}
+
 
 @media screen and (max-width: 520px){
   header {
-    width: 490px;
+    width: 450px;
     padding: auto auto;
   }
 }
